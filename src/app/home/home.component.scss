@@ -1,0 +1,268 @@
+.body{
+background-color:#FEE2FD; 
+width:100vw;
+height: 100vh;
+
+}
+.logo{
+	position: absolute;
+	top: 191%;
+	left:80%;
+}
+::-webkit-scrollbar{
+visibility: hidden;
+}
+.main{
+width:75%;
+height: 45%;
+position: absolute;
+top:0%;
+left:25%;
+
+}
+.massage{
+    width: 78%;
+    height: 19.25%;
+    background-color: #FEE2FD;
+    position: absolute;
+    top:85%;
+    left: 5%;
+     border : 2px solid #70066B;
+    border-radius: 5px;
+
+
+}
+.read{
+  position: absolute;
+    top:85%;
+    left: 84%;
+    width:7%; 
+    height: 20.5%;
+    border : 2px solid #70066B;
+    border-radius: 5px;
+        background-color: #FEE2FD;
+        
+
+}
+.read1{
+  position: absolute;
+     top:10%;
+    right: 10%;
+    width:80%; 
+    height: 80%;
+        &:hover{
+     opacity:0.5;
+         cursor: pointer;
+}
+  
+}
+.sent{
+    position: absolute;
+    top:85%;
+    left:91.6%;
+    width:7%; 
+    height: 20.5%;
+    border : 2px solid #70066B;
+    border-radius: 5px; 
+        background-color: #FEE2FD;
+            &:hover{
+     opacity:0.5;
+         cursor: pointer;
+}
+
+}
+.sent1{
+  position: absolute;
+    top:10%;
+    right: 9%;
+    width:80%; 
+    height: 80%;
+
+
+}
+.contact{
+    width: 10%;
+    height:40% ;
+    position:absolute;
+    top:4.5%;
+    right: 2%;
+    border : 2px solid #70066B;
+    border-radius: 5px; 
+}
+.change{
+     width: 10.25%;
+    height:6% ;
+    position:absolute;
+    top:47%;
+   right: 2%;
+    border : 2px solid #70066B;
+    border-radius: 5px; 
+    background-color: #FEE2FD;
+    font-family: Bradley Hand ITC;
+    font-size: 107%;
+    font-weight: bold;
+        &:hover{
+     opacity:0.5;
+         cursor: pointer;
+}
+}
+
+.aside1{
+    width: 25%;
+    height:48% ;
+  position:absolute;
+    top:1%;
+    left:.5%;
+    border : 2px solid #70066B;
+    border-radius: 5px; 
+  
+}
+
+.h1{
+    position: absolute;
+    top: -1.5%;
+    left: 4.5%;
+    font-family: Bradley Hand ITC;
+}
+.contact1{
+    width: 20%;
+    height:20% ;
+    position:absolute;
+    top:20%;
+    left:2%;
+    border : 2px solid #70066B;
+    border-radius: 5px; 
+ background-color: #FEE2FD;
+
+}
+.add_contact{
+
+    width: 100%;
+    height:88% ;
+    position:absolute;
+    top:33%;
+    left:10%;
+    &:hover{
+     opacity:0.5;
+         cursor: pointer;
+}
+}
+.view{
+   width: 20%;
+    height:20% ;
+    position:absolute;
+    top:20%;
+    left:25%;
+    border : 2px solid #70066B;
+    border-radius: 5px; 
+    background-color: #FEE2FD;
+    font-family: Bradley Hand ITC;
+    font-size: 107%;
+    font-weight: bold;
+    &:hover{
+     opacity:0.5;
+         cursor: pointer;
+}
+}
+
+
+.aside{
+    width: 25%;
+    height:48% ;
+  position:absolute;
+    top:50.5%;
+    left:.5%;
+    border : 2px solid #70066B;
+    border-radius: 5px; 
+   /*background-color: #FEE2FD;*/
+}
+.h1{
+padding: 2%;	
+    font-family: Bradley Hand ITC;
+}
+
+
+
+.wrapper,.copyright {
+	padding: 20px;
+    text-align: center;
+    position:absolute;
+    top:40%;
+    left:.5%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+hr{
+	margin: 30px 20px;
+	border-top:2px solid #1C1E26 ;
+	border-bottom:2px solid #38404D;
+}
+/*
+.list-unstyled {
+	padding-left: 0;
+	list-style: none;
+}
+.list-inline li {
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin-bottom: 10px;
+}
+*/
+/*Change circle size and color here*/
+.img{
+	width: 13%;
+	height: 8%;
+	line-height: 50px;
+	text-align: center;
+	color: black;
+	padding:5%;
+	margin: 0.3%;
+	color: black(250, 250, 250, 0.51);
+    -webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-radius: 20%;
+	border:solid;
+&:hover{
+     opacity:0.5;
+         cursor: pointer;
+}
+}
+/*delete?
+.social-icons.icon-circle .fa{ 
+	border-radius: 20%;
+}*/
+
+
+.img:active {/*on click zoom on...*/
+	color: #FFF;
+	-webkit-box-shadow: 1px 1px 3px #333;
+	-moz-box-shadow: 1px 1px 3px #333;
+	box-shadow: 1px 1px 3px #333; 
+}
+.img:active { /*markering---ask earn*/
+ 	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+}
+
+.add_cat{
+	 width: 21%;
+    height:20% ;
+    position:absolute;
+    top:10%;
+   right:5%;
+    border : 2px solid #70066B;
+    border-radius: 5px; 
+    background-color: #FEE2FD;
+    font-family: Bradley Hand ITC;
+    font-size: 107%;
+	font-weight: bold;
+	    &:hover{
+     opacity:0.5;
+         cursor: pointer;
+}
+}
