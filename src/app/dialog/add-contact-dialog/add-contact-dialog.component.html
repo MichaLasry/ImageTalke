@@ -1,15 +1,37 @@
+<div class="container">
+    <div class="Acontact-box animated fadeInUp">
+        <div class="box-header">
+            <h2>Add contact</h2>
 
-<div class="add-contact">
+        </div>
 
-    <h1 class="h1">add contact</h1>
-    <div class="addN">Enter contact Name</div>
-    <textarea class="txtA"></textarea>
-    <div class="addP">Enter phone number</div>
-    <textarea class="txtB"></textarea>
-    <form input action="/action_page">
-        <input class="picter" type="file" name="pic" accept="image/*">
-        <input class="btn1" type="submit">
-    </form>
-
-
+        <form class="form" action="/action_page">
+            <input type="text" placeholder="Contact name">
+            <input type="Pelephone number" placeholder="Phone number">
+            <form input action="/action_page">
+                <input class="picter" type="file" name="pic" accept="image/*">
+                <button (click)=home() type="submit" id="Acontact-button">Add</button>
+            </form>
+            </form> 
+    </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        $('#logo').addClass('animated fadeInDown');
+        $("input:text:visible:first").focus();
+    });
+    $('#username').focus(function () {
+        $('label[for="username"]').addClass('selected');
+    });
+    $('#username').blur(function () {
+        $('label[for="username"]').removeClass('selected');
+    });
+    $('#password').focus(function () {
+        $('label[for="password"]').addClass('selected');
+    });
+    $('#password').blur(function () {
+        $('label[for="password"]').removeClass('selected');
+    });
+
+</script>

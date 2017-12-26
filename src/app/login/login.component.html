@@ -6,8 +6,8 @@
 			</div>
 				
 			<form class="form" action="/action_page">
-			<input type="text" placeholder="Username">
-			<input type="Pelephone number" placeholder="Pelephone number">
+			<input type="text" id="Username" onsubmit="myFunction()" pattern="[A-Za-z]{}" placeholder="Username">
+			<input type="text"  id="PelephoneNumber" placeholder="Pelephone number">
 			<button (click)=home() type="submit" id="login-button">Login</button>
 		</form>
 		</div>
@@ -21,6 +21,7 @@
 	$('#username').focus(function() {
 		$('label[for="username"]').addClass('selected');
 	});
+	
 	$('#username').blur(function() {
 		$('label[for="username"]').removeClass('selected');
 	});

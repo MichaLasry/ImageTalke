@@ -1,5 +1,5 @@
 .body{
-background-color:#FEE2FD; 
+background-color:#FEFDFD; 
 width:100vw;
 height: 100vh;
 
@@ -25,20 +25,20 @@ left:25%;
     height: 19.25%;
     background-color: #FEE2FD;
     position: absolute;
-    top:85%;
+    top:89%;
     left: 5%;
-     border : 2px solid #70066B;
+     border : 2px solid #8F0909;
     border-radius: 5px;
 
 
 }
 .read{
   position: absolute;
-    top:85%;
+    top:89%;
     left: 84%;
     width:7%; 
     height: 20.5%;
-    border : 2px solid #70066B;
+    border : 2px solid #8F0909;
     border-radius: 5px;
         background-color: #FEE2FD;
         
@@ -53,12 +53,13 @@ left:25%;
         &:hover{
      opacity:0.5;
          cursor: pointer;
+         
 }
   
 }
 .sent{
     position: absolute;
-    top:85%;
+    top:89%;
     left:91.6%;
     width:7%; 
     height: 20.5%;
@@ -80,9 +81,9 @@ left:25%;
 
 
 }
-.contact{
-    width: 10%;
-    height:40% ;
+.contact{//the place that the picture of the contact
+    width: 10vw;
+    height:18vh ;
     position:absolute;
     top:4.5%;
     right: 2%;
@@ -90,11 +91,11 @@ left:25%;
     border-radius: 5px; 
 }
 .change{
-     width: 10.25%;
-    height:6% ;
+    width: 10.25vw;
+    height:6vh ;
     position:absolute;
     top:47%;
-   right: 2%;
+    right: 2%;
     border : 2px solid #70066B;
     border-radius: 5px; 
     background-color: #FEE2FD;
@@ -169,11 +170,13 @@ left:25%;
 .aside{
     width: 25%;
     height:48% ;
-  position:absolute;
+    position:absolute;
     top:50.5%;
     left:.5%;
     border : 2px solid #70066B;
     border-radius: 5px; 
+    display: flex;
+    overflow: scroll;
    /*background-color: #FEE2FD;*/
 }
 .h1{
@@ -184,10 +187,10 @@ padding: 2%;
 
 
 .wrapper,.copyright {
-	padding: 20px;
+	padding: 15px;
     text-align: center;
     position:absolute;
-    top:40%;
+    top:17%;
     left:.5%;
     display: flex;
     flex-wrap: wrap;

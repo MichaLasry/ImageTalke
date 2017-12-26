@@ -8,5 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class NumbersComponent implements OnInit {
 
   constructor() { }
-
+ ngOnInit() {
+  }
 }

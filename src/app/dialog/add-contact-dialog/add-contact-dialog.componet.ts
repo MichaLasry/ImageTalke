@@ -1,16 +1,16 @@
 import { Component, Inject } from "@angular/core";
-//import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 
 @Component({
     selector: "dialog-new-contact",
     templateUrl: "./add-contact-dialog.component.html",
-    styleUrls: ["add-contact-dialog.component.css"]
+    styleUrls: ["add-contact-dialog.component.scss"]
 })
 export class AddContactDialog {
     constructor(
-       // public dialogRef: MatDialogRef<AddContactDialog>,
-        //@Inject(MAT_DIALOG_DATA) public data: any) {
+       public dialogRef: MatDialogRef<AddContactDialog>,
+        @Inject(MAT_DIALOG_DATA) public data: any) {
 
     }
 
@@ -19,7 +19,7 @@ export class AddContactDialog {
     }
 
     submit(){
-        this.dialogRef.close(this.data)
+        this.dialogRef.close(this.data);
     }
 
 
