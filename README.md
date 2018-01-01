@@ -9,7 +9,7 @@ In most cosmetic shops, a long time has been taken from the patient for the appo
 Also, Customers bother the beautician outside of the office hours for queuing or trivial questions.
 
 
-![project logo (this one for is taken from basecamp - a project management service)](https://github.com/Rut-B/new-idea/blob/master/LogoSample_ByTailorBrands.jpg)
+![project logo (this one for is taken from basecamp - a project management service)](https://github.com/MichaLasry/ImageTalke/blob/master/images/logo.JPG)
 
 
 ## Please visit our [live application](https://github.com/TamarKl/exe1/tree/master/src/index.html)
