@@ -1,8 +1,8 @@
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jce-il/group_project)
-[![GitHub issues](https://img.shields.io/github/issues/jce-il/TM-COSMETICS.svg?style=flat)](https://github.com/Rut-B/TM-COSMETICS/issues)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jce-il/ImageTalk)
+[![GitHub issues]()]()
 
-# TM COSMETICS
+# IMAGE TALK
 
 In most cosmetic shops, a long time has been taken from the patient for the appointment management run by the cosmetician herself.
 
