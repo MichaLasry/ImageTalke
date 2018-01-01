@@ -22,7 +22,7 @@ Please visit our wiki for furthur project info:
 ### [User Manual](../../wiki/user-manual) (empty for now)
 
 ### [Team Page](https://github.com/MichaLasry/ImageTalke/wiki/Team-Page)
-### [Task Management System](https://github.com/Rut-B/TM-COSMETICS/issues)
+### [Task Management System](https://github.com/MichaLasry/ImageTalke/issues)
 
 ### Project Documents
 - [Project Idea](//github.com/jce-il/se-class/blob/master/ideas/2018/TM%20COSMETICS.docx) ([Presentation](https://github.com/jce-il/se-class/blob/master/ideas/2018/TM%20COSMETICS.pptx))
