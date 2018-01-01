@@ -12,9 +12,7 @@ Also, Customers bother the beautician outside of the office hours for queuing or
 ![project logo (this one for is taken from basecamp - a project management service)](https://github.com/MichaLasry/ImageTalke/blob/master/images/logo.JPG)
 
 
-## Please visit our [live application](https://github.com/TamarKl/exe1/tree/master/src/index.html)
-- Alright, currently only a landing page...
-
+## Please visit our [live application](https://github.com/MichaLasry/ImageTalke/blob/master/src/app/home/home.component.html)
 
 ## Disclaimer
 This project is developed as part of the requirements for a [software engineering course](https://github.com/jce-il/se-class/wiki) at the software engineering department - [Azrieli College of Engineering](http://www.jce.ac.il/), Jerusalem, Israel.
