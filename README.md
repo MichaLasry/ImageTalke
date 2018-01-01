@@ -34,8 +34,8 @@ Please visit our wiki for furthur project info:
 
 ### Iteration Pages
 - [Iteration 0 - ZFR](https://github.com/MichaLasry/ImageTalke/wiki/Iteration-0---ZFR)
-- [Iteration 1 - MVP](https://github.com/Rut-B/TM-COSMETICS/wiki/MVP-iter-1)
-- [Iteration 2 - BFSC](https://github.com/Rut-B/TM-COSMETICS/wiki/Iter-2--Basic-Functional-Customers-Side-BFCS)
+- [Iteration 1 - MVP](https://github.com/MichaLasry/ImageTalke/wiki/Iteration-1-MVP)
+- [Iteration 2 - BFSC](https://github.com/MichaLasry/ImageTalke/wiki/Iteration-2--BFSC)
 - [Iteration 3 - Feature Y]()
 - [Iteration 4 - Feature Z]()
 
