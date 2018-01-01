@@ -4,9 +4,9 @@
 
 # Image Talke
 
-In most cosmetic shops, a long time has been taken from the patient for the appointment management run by the cosmetician herself.
+Our application is designed for children with social disabilities - defined as autism, which is described with difficulty in communicating and expressing language lashes.
 
-Also, Customers bother the beautician outside of the office hours for queuing or trivial questions.
+The app can help these children learn and communicate with those around them. By associating sentences by assembling images into a sentence.
 
 
 ![project logo (this one for is taken from basecamp - a project management service)](https://github.com/MichaLasry/ImageTalke/blob/master/images/logo.JPG)
