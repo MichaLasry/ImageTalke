@@ -1,28 +1,43 @@
-# Imagetalke
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.1.
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jce-il/group_project)
+[![GitHub issues](https://img.shields.io/github/issues/jce-il/TM-COSMETICS.svg?style=flat)](https://github.com/Rut-B/TM-COSMETICS/issues)
 
-## Development server
+# TM COSMETICS
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+In most cosmetic shops, a long time has been taken from the patient for the appointment management run by the cosmetician herself.
 
-## Code scaffolding
+Also, Customers bother the beautician outside of the office hours for queuing or trivial questions.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+![project logo (this one for is taken from basecamp - a project management service)](https://github.com/Rut-B/new-idea/blob/master/LogoSample_ByTailorBrands.jpg)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
+## Please visit our [live application](https://github.com/TamarKl/exe1/tree/master/src/index.html)
+- Alright, currently only a landing page...
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Disclaimer
+This project is developed as part of the requirements for a [software engineering course](https://github.com/jce-il/se-class/wiki) at the software engineering department - [Azrieli College of Engineering](http://www.jce.ac.il/), Jerusalem, Israel.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+Please visit our wiki for furthur project info: 
 
-## Further help
+### [User Manual](../../wiki/user-manual) (empty for now)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### [Team Page](../../wiki/team)
+### [Task Management System](https://github.com/Rut-B/TM-COSMETICS/issues)
+
+### Project Documents
+- [Project Idea](//github.com/jce-il/se-class/blob/master/ideas/2018/TM%20COSMETICS.docx) ([Presentation](https://github.com/jce-il/se-class/blob/master/ideas/2018/TM%20COSMETICS.pptx))
+- [Project Inception](../../wiki/inception)
+- [Software Requirements Specification](../../wiki/srs)
+- [Software Design Specification](../../wiki/sds)
+
+### Iteration Pages
+- [Iteration 0 - ZFR](../../wiki/iter0-zfr)
+- [Iteration 1 - MVP](https://github.com/Rut-B/TM-COSMETICS/wiki/MVP-iter-1)
+- [Iteration 2 - BFSC](https://github.com/Rut-B/TM-COSMETICS/wiki/Iter-2--Basic-Functional-Customers-Side-BFCS)
+- [Iteration 3 - Feature Y]()
+- [Iteration 4 - Feature Z]()
+
+
+
