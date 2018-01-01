@@ -21,7 +21,7 @@ Please visit our wiki for furthur project info:
 
 ### [User Manual](../../wiki/user-manual) (empty for now)
 
-### [Team Page](../../wiki/team)
+### [Team Page](https://github.com/MichaLasry/ImageTalke/wiki/Team-Page)
 ### [Task Management System](https://github.com/Rut-B/TM-COSMETICS/issues)
 
 ### Project Documents
