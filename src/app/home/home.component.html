@@ -1,39 +1,50 @@
 <div class="body">
     <div class="main">
-       <!-- <textarea class="massage"></textarea>-->
+        <div>
+         <div  class="Letters" *ngFor="let t of text">{{t}}</div> 
+       
+         
+
+        </div>
+        <!-- <textarea class="massage"></textarea>-->
         <!--<img class="read" src="file:///C:/Users/shiraed/Downloads/voice-message-microphone-button%20(1).svg">-->
-       <div class="massage" contenteditable=true style="border:1px solid black"></div>
+        <div class="massage" contenteditable=true style="position:absolute;left:3.5%; border:3.5px solid #8F0909">
+        <img *ngFor="let img of imgSelect" [src]="img.img" width="8%" height="75%" >
+        </div>
 
 
-        
-        
-        <button class="read">
-    <img class="read1" src="https://image.flaticon.com/icons/svg/0/527.svg">
-        </button>
-        <button class="sent">
-    <img class="sent1" src="https://image.flaticon.com/icons/png/512/510/510908.png">
-        </button>
+        <a class="read" (click)="ReadText()">
+            <img class="read1" src="https://image.flaticon.com/icons/svg/0/527.svg">
+        </a>
+
+        <!--whatsapp://send?abid=phonenumber&text=Hello%2C%20World!"  -->
+
+        <!--"https://api.whatsapp.com/send?phone=whatsappphonenumber&text=urlencodedtext"  -->
+        <!-- <a class="sent" href="https://api.whatsapp.com/send?phone=972587138300&text={{text[0]}}" (click)="generateText()"> -->
+             <a class="sent" (click)="generateText()" >
+ 
+            <img class="sent1" src="https://image.flaticon.com/icons/png/512/510/510908.png">
+        </a>
         <button class="change">change contact</button>
         <div class="contact"></div>
-       <!-- <img class="logo" src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/logo.JPG?alt=media&token=f7ef3990-0866-4ca0-95a0-d6cebc9eb6a8">-->
+        <!-- <img class="logo" src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/logo.JPG?alt=media&token=f7ef3990-0866-4ca0-95a0-d6cebc9eb6a8">-->
     </div>
 
 
     <div class="aside1">
         <h1 class="h1">Contact:</h1>
         <button class="contact1">
-     <img (click)="add()" class="add_contact" src="https://image.flaticon.com/icons/svg/60/60732.svg">
+            <img (click)="add()" class="add_contact" src="https://image.flaticon.com/icons/svg/60/60732.svg">
         </button>
-        <button (click)=contacts() class="view">view all contacts</button>
+        
     </div>
 
     <div class="aside">
         <h1 class="h1">Categories:</h1>
-        
+       
         <div class="wrapper">
-            
-           <img class="img" (click)=food() src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fkategorios%2Ffood.png?alt=media&token=e39a3aaa-277e-4acd-ab20-6f4f1c0db294">
-            <img class="img" (click)=colors() src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fkategorios%2Fcolor.png?alt=media&token=7e235ff9-7649-430b-9cbd-945718b54f0e">
+            <img class="img" (click)="food()" src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fkategorios%2Ffood.png?alt=media&token=e39a3aaa-277e-4acd-ab20-6f4f1c0db294">
+            <img class="img" (click)="colors()" src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fkategorios%2Fcolor.png?alt=media&token=7e235ff9-7649-430b-9cbd-945718b54f0e">
             <img class="img" (click)=vehicle() src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fkategorios%2Fvechiles.png?alt=media&token=fc7bb337-5da0-4931-a766-a4828f13a7ca">
             <img class="img" (click)=shapes() src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fkategorios%2Fshapes.svg?alt=media&token=f88af37d-1297-44b6-bb3c-af275f1462af">
             <img class="img" (click)=games() src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fkategorios%2Fgames.png?alt=media&token=ab2a35aa-2841-4b93-84be-da84e26cb1a9">
@@ -45,24 +56,20 @@
             <img class="img" (click)=numbers() src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Numbers%2Fkat-nmbers.png?alt=media&token=bfc3a1dc-0020-4c81-95a5-e001b1d0a006">
             <img class="img" (click)=letters() src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Letters%2Fkat-letters.png?alt=media&token=3fa5e594-ce68-4331-afe5-40722cc230bb">
             <img class="img" (click)=cookware() src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2Fkat-cookware.jpg?alt=media&token=ef5bd081-b64c-49e2-8f4f-7e5f5d0a6f58">
-
-         
-           <!--צריך להוסיף את הדף של הקטגוריה ת
+            <img class="img" (click)="fruits()" src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Fruits%2F%D7%A7%D7%98%D7%92-%D7%A4%D7%A8%D7%95%D7%AA.png?alt=media&token=24c69beb-2bd1-4fc1-ad64-9d2e3b4bd064">
+            <!--צריך להוסיף את הדף של הקטגוריה ת
             <img class="img" (click)=fruits() src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Fruits%2F%D7%A7%D7%98%D7%92-%D7%A4%D7%A8%D7%95%D7%AA.png?alt=media&token=24c69beb-2bd1-4fc1-ad64-9d2e3b4bd064">
-
           <!--צריך לשנות את התמונות לתמונות של הקטגוריות
             <img class="img" (click)=housewares() src="https://image.flaticon.com/icons/svg/136/136362.svg">-->
-
-
-
-        </div>
-        <button class="add_cat">add category</button>
-        </div>
-  <div *ngIf="false">
-        <router-outlet></router-outlet>
-   
-    <div>
-        <app-animals [imgs]="imgs">
-        </app-animals>
+     
+          </div>
+        <!--  <button class="add_cat">add category</button>-->
     </div>
-</div>
+    <div>
+        <div>
+            <app-animals [_imgs]="imgs" (imgClick)="addToText($event)">
+           
+                
+            </app-animals>
+        </div>
+    </div>

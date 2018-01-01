@@ -3,61 +3,47 @@ import { NgModule } from '@angular/core';
 import { Router } from "@angular/router";
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { AddContactComponent } from './add-contact/add-contact.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { ShapesComponent } from './shapes/shapes.component';
 import { AnimalsComponent } from './animals/animals.component';
-import { GamesComponent } from './games/games.component';
-import { PlacesComponent } from "./places/places.component";
-import {LettersComponent} from "./letters/letters.component";
-import {CookwareComponent} from "./cookware/cookware.component";
-import {EmotionsComponent} from "./emotions/emotions.component";
-import {HousewaresComponent} from "./housewares/housewares.component";
-import {NumbersComponent} from "./numbers/numbers.component";
-import {SocialComponent} from "./social/social.component";
-import {VegetablesComponent} from "./vegetables/vegetables.component";
-import {VehicleComponent} from "./vehicle/vehicle.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule } from "@angular/material";
+import { MatDialogModule, MatButtonModule, MatIconModule } from "@angular/material";
 import { AddContactDialog } from "./dialog/add-contact-dialog/add-contact-dialog.componet";
-import { ColorsComponent } from './colors/colors.component';
 
-
+export const environment = {
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyBrOFiKMXNYRaCE-R34GjX8wEST3yltt9E",
+    authDomain: "imagetalk-76424.firebaseapp.com",
+    databaseURL: "https://imagetalk-76424.firebaseio.com",
+    projectId: "imagetalk-76424",
+    storageBucket: "imagetalk-76424.appspot.com",
+    messagingSenderId: "498043825347"
+  }
+};
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    AddContactComponent,
     HomeComponent,
     ContactsComponent,
-    ShapesComponent,
     AnimalsComponent,
-    GamesComponent,
-    PlacesComponent,
-    LettersComponent,
-    CookwareComponent,
-    EmotionsComponent,
-    HousewaresComponent,
-    NumbersComponent,
-    SocialComponent,
-    VegetablesComponent,
-    VehicleComponent,
-    AddContactDialog,
-    ColorsComponent
+    AddContactDialog
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   entryComponents: [
-    AddContactDialog
+    AddContactDialog,
   ],
   bootstrap: [AppComponent]
 })
