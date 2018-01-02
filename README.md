@@ -25,7 +25,7 @@ Please visit our wiki for furthur project info:
 ### [Task Management System](https://github.com/MichaLasry/ImageTalke/issues)
 
 ### Project Documents
-- [Project Idea](//github.com/jce-il/se-class/blob/master/ideas/2018/TM%20COSMETICS.docx) ([Presentation](https://github.com/jce-il/se-class/blob/master/ideas/2018/TM%20COSMETICS.pptx))
+- [Project Idea](https://github.com/MichaLasry/ImageTalke/blob/master/Image%20talk.docx) ([Presentation](https://github.com/jce-il/se-class/blob/master/ideas/2018/TM%20COSMETICS.pptx))
 - [Project Inception](../../wiki/inception)
 - [Software Requirements Specification](../../wiki/srs)
 - [Software Design Specification](../../wiki/sds)
