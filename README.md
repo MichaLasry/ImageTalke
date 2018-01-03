@@ -1,6 +1,6 @@
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jce-il/ImageTalk)
-[![GitHub issues]()](https://github.com/MichaLasry/ImageTalke/issues)
+[![GitHub issues](https://github.com/MichaLasry/ImageTalke/issues)
 
 # Image Talke
 
