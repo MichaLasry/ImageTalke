@@ -10,6 +10,17 @@ import { AnimalsComponent } from './animals/animals.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule, MatButtonModule, MatIconModule } from "@angular/material";
 import { AddContactDialog } from "./dialog/add-contact-dialog/add-contact-dialog.componet";
+import { FormsModule }    from '@angular/forms';
+import { Component } from '@angular/core';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { Observable } from 'rxjs/Observable';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth'
+
+
+
+
 
 export const environment = {
   production: false,
@@ -30,16 +41,26 @@ export const environment = {
     HomeComponent,
     ContactsComponent,
     AnimalsComponent,
-    AddContactDialog
+    AddContactDialog,
+    
+    
    
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatDialogModule,
     MatButtonModule,
-    MatIconModule
+    AngularFireModule.initializeApp(environment.firebase),
+    //AngularFireModule.initializeApp(firebaseConfig),
+    //להוסיף קומפוננט לדוג' :https://github.com/angular-university/angular-firebase-app/blob/master/src/environments/firebase.config.ts
+   //https://alligator.io/angular/cloud-firestore-angularfire/
+   AngularFirestoreModule.enablePersistence(),
+    MatIconModule,
+    BrowserModule,
+    AngularFirestoreModule
   ],
   providers: [],
   entryComponents: [

@@ -1,1 +1,32 @@
-<div class="title">contacts</div>
+	<div class="container">
+		<div class="login-box animated fadeInUp">
+			<div class="box-header">
+				<h2>contacts</h2>
+			</div>
+                <img class="img" src="                                         /b/imagetalk-76424.appspot.com/o/mom.JPG?alt=media&token=26d3a7af-98de-48e4-ab64-e80d7c8e3a3a"> 
+                <div class="m">mom</div>
+                <img class="img" src="                                         /b/imagetalk-76424.appspot.com/o/mom.JPG?alt=media&token=26d3a7af-98de-48e4-ab64-e80d7c8e3a3a"> 
+                <div class="m">dad</div>
+		</div>
+	</div>
+
+	<script>
+	$(document).ready(function () {
+    	$('#logo').addClass('animated fadeInDown');
+    	$("input:text:visible:first").focus();
+	});
+	$('#username').focus(function() {
+		$('label[for="username"]').addClass('selected');
+	});
+	
+	$('#username').blur(function() {
+		$('label[for="username"]').removeClass('selected');
+	});
+	$('#password').focus(function() {
+		$('label[for="password"]').addClass('selected');
+	});
+	$('#password').blur(function() {
+		$('label[for="password"]').removeClass('selected');
+	});
+</script>
+

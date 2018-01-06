@@ -1,3 +1,25 @@
+.dialogdemoBasicUsage #popupContainer {
+  position: relative; }
+
+.dialogdemoBasicUsage .footer {
+  width: 100%;
+  text-align: center;
+  margin-left: 18px; }
+
+.dialogdemoBasicUsage .footer, .dialogdemoBasicUsage .footer > code {
+  font-size: 0.8em;
+  margin-top: 50px; }
+
+.dialogdemoBasicUsage button {
+  width: 200px; }
+
+.dialogdemoBasicUsage div#status {
+  color: #c60008; }
+
+.dialogdemoBasicUsage .dialog-demo-prerendered md-checkbox {
+	margin-bottom: 0; }
+	
+/*
 body {	
 	background-size: cover;
 	font-size: 16px;
@@ -13,11 +35,18 @@ h2 {
 	text-shadow: 0 0 10px rgba(0,0,0,0.8);
 }
 
-/* Layout */
+ /*Layout
 .container {
 	margin: 0;
 }
+.b_add{
+width:38%; 
+height: 18%;
+} 
 
+.picter{
+	display: none !important;	
+}
 
 .Acontact-box {
 	background-color: white;
@@ -86,7 +115,7 @@ form {
 }
 form input {
   -webkit-appearance: none;
-     -moz-appearance: none;
+  -moz-appearance: none;
   outline: 0;
   border: 1px solid rgba(255, 255, 255, 0.4);
   background-color: rgba(255, 255, 255, 0.2);
@@ -109,3 +138,126 @@ form input:focus {
   width: 300px;
   color: #53e3a6;
 }
+
+*/
+/*.mat-dialog-container
+{
+	margin: 0 0 0 0;
+	
+}*/
+.box-header{
+    //background-color:#8F0909;
+	font-weight: 400;
+	letter-spacing: 1px;
+	line-height: 2.8em;
+	text-shadow: 0 0 10px rgba(0,0,0,0.8);
+    margin-left: auto;
+	margin-right: auto;
+	width:350px;
+	height:120;
+	left:40%;
+	top:30%;
+	vertical-align:middle;
+}
+
+h2{
+    font-family:Axure Handwriting;
+    text-transform: uppercase;
+    color:#8F0909;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 3.35vw;
+    line-height: 2.8em;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+	text-align: center; 
+	font-weight:bolder;
+	margin-top:0;
+}  
+/*.form{
+position:absolute;
+left: 31%;
+top:30.5%;
+width: 380px;
+height:450px;
+padding: 20px 0;
+ z-index: 2;
+align-self: center;
+}*/
+
+.form{
+	
+  margin-left: auto;
+  margin-right: auto;
+  //width: 360px;
+ //height:440px;
+  padding: 20px 0;
+   z-index: 2;
+  align-self: center;
+  }
+
+.b_add{
+width:55%; 
+height: 25%;
+font-size: 180%;
+//text-align: center; 
+display: block; 
+margin-left: auto;
+ margin-right: auto;
+ background-color: white;
+ border:dashed;
+ border-color: LightGray;
+ color: LightGray;
+ border-radius: 5px;
+} 
+
+.picter{
+	display: none !important;
+	text-align: center; 
+	display: block;
+	 margin-left: auto; 
+	margin-right: auto;	
+}
+
+.txt1{
+	text-align: center;
+	display: block; 
+	margin-left: auto;
+	margin-right: auto;
+	border:2px solid #8F0909;
+	border-radius: 5px;
+	width: 60%;
+	height:5%;
+}
+
+.txt2{
+	text-align: center;
+	display: block; 
+	margin-left: auto;
+	margin-right: auto;
+	size: 250%;
+	border:2px solid #8F0909;
+	border-radius: 5px;
+	width: 60%;
+	height:5%;
+}
+
+#Acontact-button{
+ 	margin-top: -50px;
+	border: 0;
+	border-radius: 4px;
+	color: white;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size:1em;
+	letter-spacing: 1px;
+	background-color:#8F0909;
+	cursor:pointer;
+	outline: none;
+	font-family:Axure Handwriting;
+	text-align: center;
+	 margin-left: auto;
+	 margin-right: auto;
+	  display: block;
+}
+
