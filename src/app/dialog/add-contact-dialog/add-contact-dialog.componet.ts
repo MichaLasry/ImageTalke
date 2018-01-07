@@ -1,6 +1,6 @@
 import { Component, Inject } from "@angular/core";
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-
+import * as firebase from 'firebase/app';
 import { Router } from "@angular/router";
 //import { contact } from './models/contat.model';
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from 'angularfire2/firestore';
@@ -20,8 +20,8 @@ export class AddContactDialog {
     public contactimg:ImageData;
 
     constructor(
-       public dialogRef: MatDialogRef<AddContactDialog>){
-        //@Inject(MAT_DIALOG_DATA) public data: any,public router:Router, private afs: AngularFirestore, public firebaseService: Firebase) {
+       public dialogRef: MatDialogRef<AddContactDialog>,
+        @Inject(MAT_DIALOG_DATA) public data: any,public router:Router, private afs: AngularFirestore,/* public firebaseService: Firebase*/) {
             this.contactname="";
             this.contactphone=null;
             this.contactimg=null;
