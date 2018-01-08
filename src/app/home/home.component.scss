@@ -1,5 +1,5 @@
 .body{
-    background-color:#Fff; 
+    //background-color:#Fff; 
     width:100vw;
     height: 100vh;
     
@@ -80,7 +80,7 @@
          cursor: pointer;
              
     }
-      
+
     }
     .sent{
         position: absolute;
@@ -187,7 +187,7 @@
         left:28%;
         border : 4px solid #8F0909;
         border-radius: 13%; 
-        background-color: #FFF;
+        //background-color: #FFF;
         font-family: Bradley Hand ITC;
         font-size: 107%;
         font-weight: bold;
@@ -255,7 +255,7 @@
     }
     
     .img:active {/*on click zoom on...*/
-        color: #FFF;
+        //color: #FFF;
         -webkit-box-shadow: 1px 1px 3px #333;
         -moz-box-shadow: 1px 1px 3px #333;
         box-shadow: 1px 1px 3px #333; 
