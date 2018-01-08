@@ -1,4 +1,6 @@
 
+
+
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jce-il/ImageTalk)
 [![GitHub issues](https://img.shields.io/github/issues/jce-il/ImageTalke.svg?style=flat)](https://github.com/MichaLasry/ImageTalke/issues)
 # Image Talke
@@ -22,6 +24,9 @@ Please visit our wiki for furthur project info:
 
 ### [Team Page](https://github.com/MichaLasry/ImageTalke/wiki/Team-Page)
 ### [Task Management System](https://github.com/MichaLasry/ImageTalke/issues)
+### [Project Board link](https://github.com/MichaLasry/ImageTalke/projects/1)
+
+
 
 ### Project Documents
 - [Project Idea](https://github.com/MichaLasry/ImageTalke/blob/master/Image%20talk.docx) ([Presentation](https://github.com/MichaLasry/ImageTalke/blob/master/Image%20talk%20(1).pdf))
@@ -33,7 +38,7 @@ Please visit our wiki for furthur project info:
 - [Iteration 0 - ZFR](https://github.com/MichaLasry/ImageTalke/wiki/Iteration-0---ZFR)
 - [Iteration 1 - MVP](https://github.com/MichaLasry/ImageTalke/wiki/Iteration-1-MVP)
 - [Iteration 2 - BFSC](https://github.com/MichaLasry/ImageTalke/wiki/Iteration-2--BFSC)
-- [Iteration 3 - Feature Y](https://github.com/MichaLasry/ImageTalke/wiki/Iteration-3---Feature-Y)
+- [Iteration 3 - Functionality](https://github.com/MichaLasry/ImageTalke/wiki/Iteration-3---Functionality)
 - [Iteration 4 - Feature Z]()
 
 
