@@ -57,7 +57,6 @@ export class HomeComponent implements OnInit {
     var msg = new SpeechSynthesisUtterance(str);
     window.speechSynthesis.speak(msg);
   }
-  /*
   public put_pic_up() {
     let str = "";
     this.imgSelect.forEach(item => {
@@ -66,7 +65,6 @@ export class HomeComponent implements OnInit {
     var msg = new SpeechSynthesisUtterance(str);
     window.speechSynthesis.speak(msg);
   }
-*/
 
   /*
     get picArr() {
@@ -74,86 +72,83 @@ export class HomeComponent implements OnInit {
    }
  */
 
-
   contacts(): void {
     this.router.navigate(["contacts"]);
   }
   put_pic(imgUrl): void {
     document.execCommand('insertimage', false, imgUrl);
-
   }
 
   animals(): void {
     this.imgs = [
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F311525.png?alt=media&token=ede92443-c234-4b39-a3a5-aef18a3cc7f1",
-        word: "lion"
+        word: "a lion"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F194953.png?alt=media&token=28890143-fbaa-406a-8b36-c7b3b0b4ce23",
-        word: "cat"
+        word: "a cat"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2Fsnake.jpg?alt=media&token=bfbbea56-d640-4289-b6db-b808e08266a5",
-        word: "snake"
+        word: "a snake"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F355679.svg?alt=media&token=5dd217aa-e111-4063-9602-1eb480cf6c2f",
-        word: "camel"
+        word: "a camel"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F616599.svg?alt=media&token=f8804ae9-b5d5-4b14-ad20-5791a5e2b2d9",
-        word: "monky"
+        word: "a monky"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F616710.png?alt=media&token=dc5b768b-bf63-4b1b-90ff-7f1ab417d2e8",
-        word: "hourse"
+        word: "a hourse"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F616720.png?alt=media&token=2cad27f1-bb5d-465d-895e-15b8ded36198",
-        word: "dog"
+        word: "a dog"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F194954.png?alt=media&token=71509882-7f2f-4a09-a152-c0f6b2aa5c62",
-        word: "frog"
+        word: "a frog"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2Fbear.png?alt=media&token=e47f6351-2e97-473f-ad89-b27ec528dd3a",
-        word: "bear"
+        word: "a bear"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F194959.png?alt=media&token=b9a5e7ed-0832-4e4a-b2c8-f76d808f06a0",
-        word: "hipo"
+        word: "a hipo"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F194974.png?alt=media&token=1d26a741-38d3-41b7-975a-1adde62a45c6",
-        word: "mouse"
+        word: "a mouse"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F194986.png?alt=media&token=2e8ab499-a3b3-47e9-86de-3ca4880f7273",
-        word: "cow"
+        word: "a cow"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F371972.png?alt=media&token=bf6d3008-9181-475b-b5a1-9d8dfbd4f8af",
-        word: "zebra"
+        word: "a zebra"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F616703.png?alt=media&token=ad4952ba-97e1-47bc-b125-6306f8a2652b",
-        word: "helphent"
+        word: "an elephant"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F194976.png?alt=media&token=c2581036-20bb-4c46-b57a-c75c14c1bc49",
-        word: "tigger"
+        word: "a tigger"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F194979.png?alt=media&token=2db5dad9-618c-4884-a847-06af67b13b51",
-        word: "pingween"
+        word: "a pingween"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F427406.png?alt=media&token=a1e78cf9-3d7f-4b73-ac9e-2a7cc5bc427c",
-        word: "parrot"
+        word: "a parrot"
       }
-
     ]
   }
   food(): void {
@@ -164,11 +159,11 @@ export class HomeComponent implements OnInit {
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fhamburger.svg?alt=media&token=ad1615c1-8ca6-4454-898b-02e34f5a505d",
-        word: "hamburger"
+        word: "a burger"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fbagel.svg?alt=media&token=dbfb7601-7eb0-4fa3-a42a-176b92b0b0ad",
-        word: "bagle"
+        word: "a bagle"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fbread.png?alt=media&token=129fbc3d-6c4e-4594-ae61-7708c1cdbcfb",
@@ -180,11 +175,11 @@ export class HomeComponent implements OnInit {
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fcake.svg?alt=media&token=cedc8577-ebde-4601-918b-86e50d676dac",
-        word: "cake"
+        word: "a cake"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fcandy.svg?alt=media&token=67dea0db-9be8-44e7-a50d-8fd2d21acdbc",
-        word: "candy"
+        word: "a candy"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fcereal.svg?alt=media&token=45be28a1-751d-447e-a4a6-9347e7d9f234",
@@ -196,7 +191,7 @@ export class HomeComponent implements OnInit {
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fchocolate.svg?alt=media&token=39268665-7cc2-4997-9840-89ddc9a0c6d8",
-        word: "chocolate"
+        word: "a chocolate"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fcoffee.svg?alt=media&token=f50fdc41-bcaf-4887-ada8-77fb07f4adad",
@@ -204,15 +199,15 @@ export class HomeComponent implements OnInit {
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fcookie.png?alt=media&token=27687d6e-03d4-4b3d-a1a4-1164ad629c4c",
-        word: "cookie"
+        word: "a cookie"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fcupcake.png?alt=media&token=317e2162-f206-43c5-ab1e-813cb3f9880e",
-        word: "cupcake"
+        word: "a cupcake"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fdoughnut.svg?alt=media&token=64d792a7-0c6c-4afa-8f85-8854dbbabac9",
-        word: "doughnut"
+        word: "a doughnut"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Ffries.png?alt=media&token=0aa22abb-7c3c-4ec3-ba79-af1c80b14332",
@@ -220,7 +215,7 @@ export class HomeComponent implements OnInit {
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2FIce%20cream.png?alt=media&token=4d3a5b63-9d53-443a-b3a7-d142783d5850",
-        word: "ice cream"
+        word: "an ice cream"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fketchup.svg?alt=media&token=6110367f-44ed-46ad-ac1a-55ebc6db7e6a",
@@ -228,23 +223,23 @@ export class HomeComponent implements OnInit {
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Flollipop.svg?alt=media&token=7d911d32-1d11-4562-9dd3-aa00446487d2",
-        word: "lollipop"
+        word: "a lollipop"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Flunch%20box.png?alt=media&token=08027998-53db-45bb-acf9-575a1b070ba8",
-        word: "unch box"
+        word: "a lunch box"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Forange%20juice.svg?alt=media&token=1b722aad-786e-4edb-a605-ba1138512a89",
-        word: "orange juice"
+        word: "a orange juice"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fpancake.svg?alt=media&token=d3a2412c-e9a6-482f-bdb6-f4dd782ccf79",
-        word: "pancake"
+        word: "a pancake"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fpeanut.svg?alt=media&token=18ceef68-ae30-489b-a5c6-0a98d0256396",
-        word: "peanut"
+        word: "a peanut"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fpopcorn.png?alt=media&token=455f8be5-67d3-4cd4-8c5c-41e227b02729",
@@ -256,27 +251,27 @@ export class HomeComponent implements OnInit {
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Frolda.svg?alt=media&token=ac6f573d-95ec-44c3-8761-4876dbd016e1",
-        word: "rolda"
+        word: "a rolda"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fsandwich.svg?alt=media&token=8866f909-bbf6-4635-99bc-2676b1e6ac23",
-        word: "sandwich"
+        word: "a sandwich"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fsteak.svg?alt=media&token=33bf2d71-4ffc-415c-ae97-16babd2d90be",
-        word: "steak"
+        word: "a steak"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fsushi.svg?alt=media&token=27a9f89a-9bc6-4a23-b43f-7de1a24a017d",
-        word: "sushi"
+        word: "a sushi"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fwatermelon%20popsicle.svg?alt=media&token=4c03557b-1c94-48e1-8606-62a3d554afdf",
-        word: "watermelon popsicle"
+        word: "a watermelon popsicle"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Food%2Fyellow%20cheese.svg?alt=media&token=ec813cfb-5cfc-47f9-bd18-3cea15bc64ad",
-        word: "yellow cheese"
+        word: "a yellow cheese"
       }
     ]
   }
@@ -337,51 +332,51 @@ export class HomeComponent implements OnInit {
     this.imgs = [
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F126840.svg?alt=media&token=1ca5d909-9420-4c4a-a5e4-cd55d251d7e3",
-        word: "silverware"
+        word: "a silverware"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F148128.svg?alt=media&token=ed843da3-6957-4f62-bfa7-d18d5096e700",
-        word: "washing machine"
+        word: "a washing machine"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F148161.svg?alt=media&token=5f5d81e7-d0cc-45c5-8e2c-538722157c2d",
-        word: "sofa"
+        word: "a sofa"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F148206.svg?alt=media&token=035ecf3d-d4d2-4579-8eb7-2feb3424a30b",
-        word: "closet"
+        word: "a closet"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F150388.svg?alt=media&token=59f37f17-7b8b-4270-93ed-d864b9d3d3ea",
-        word: "chair"
+        word: "a chair"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F150400.svg?alt=media&token=b78c0a19-9e11-4185-9a21-beea81133417",
-        word: "table"
+        word: "a table"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F164481.svg?alt=media&token=e98fc219-06e6-4cea-9d2e-47b9692a0b31",
-        word: "flat iron"
+        word: "an flat iron"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F186524.svg?alt=media&token=d4d5e375-e96e-4270-a715-33675f660ccc",
-        word: "Oven"
+        word: "an oven"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F187970.svg?alt=media&token=984e9a76-a4f3-493e-9d71-0970fdb55e75",
-        word: "frying pan"
+        word: "a frying pan"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F189946.svg?alt=media&token=d80b234e-7d3f-4be9-9857-f923386223ac",
-        word: "cooking pot"
+        word: "a cooking pot"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F204342.svg?alt=media&token=b1bff4ff-0f34-4bc7-a465-1dafd4292c9d",
-        word: "light"
+        word: "a light"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F133405.svg?alt=media&token=6fe1ddd2-3f5c-4821-bff9-c4c9603b6d09",
-        word: "cooking pot"
+        word: "a cooking pot"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F456678.png?alt=media&token=28a8e50a-d38e-41c3-965d-62dfea974ba5",
@@ -389,23 +384,23 @@ export class HomeComponent implements OnInit {
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F524492.svg?alt=media&token=3ed12e6d-f790-4c87-8393-17f2f62c5b36",
-        word: "fridge"
+        word: "a fridge"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F607057.svg?alt=media&token=45cd1cf2-88a2-40f3-924e-79e07ad27612",
-        word: "bed"
+        word: "a bed"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F621787.svg?alt=media&token=82a8bbcb-21a4-40e8-88c7-34202f6574db",
-        word: "cup of coffee"
+        word: "a cup of coffee"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F133405.svg?alt=media&token=6fe1ddd2-3f5c-4821-bff9-c4c9603b6d09",
-        word: "bathroom"
+        word: "a bathroom"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Cookware%2F231929.svg?alt=media&token=72ab787d-75a5-4707-866b-6be70bc09d57",
-        word: "washbasin"
+        word: "a washbasin"
       }
     ]
   }
@@ -455,11 +450,11 @@ export class HomeComponent implements OnInit {
     this.imgs = [
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Games%2F%D7%91%D7%A8%D7%95%D7%95%D7%96.jpg?alt=media&token=dd02223b-28e1-4c8d-9214-5e71bbe01bad",
-        word: "duck water"
+        word: "a duck water"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Games%2F%D7%92%D7%95%D7%9C%D7%95%D7%AA.jpg?alt=media&token=8b74ddc0-c16e-4b75-a04a-05f37e329b63",
-        word: "marbles"
+        word: "a marbles"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Games%2F%D7%92%D7%9C%D7%92%D7%9C%D7%99%D7%95%D7%AA.png?alt=media&token=684cc646-df6a-441d-b47f-59102a25f8a5",
@@ -467,25 +462,24 @@ export class HomeComponent implements OnInit {
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Games%2F%D7%93%D7%95%D7%91%D7%99.png?alt=media&token=22676b89-7e77-41c7-a5e4-9a7403dc5532",
-        word: "bear"
+        word: "a bearish"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Games%2F%D7%9B%D7%93%D7%95%D7%A8%20%D7%99%D7%9D.png?alt=media&token=934c93c7-bc20-4633-9bc5-3e70c68057a7",
-        word: "sea ball"
+        word: "a sea ball"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Games%2F%D7%9B%D7%93%D7%95%D7%A8.png?alt=media&token=3a36f8d8-fb99-4840-b8b3-b46f3495933e",
-        word: "ball"
+        word: "a ball"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Games%2F%D7%A4%D7%90%D7%96%D7%9C.png?alt=media&token=003cd27d-43cb-4a0c-935d-5b6bebd6907e",
-        word: "pazzel"
+        word: "a pazzel"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Games%2F%D7%A4%D7%9C%D7%99%D7%A1%D7%98%D7%A9%D7%99%D7%9F.jpg?alt=media&token=5aea8619-3774-4e18-a6d5-3522d8fe9736",
-        word: "play station"
+        word: "a play station"
       },
-
     ]
   }
   housewares(): void {
@@ -592,43 +586,42 @@ export class HomeComponent implements OnInit {
     ]
   }
   places(): void {
-
     this.imgs = [
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Fbank-01.png?alt=media&token=8d035a51-aa3a-478e-a1a3-fdccd2ed01a6",
-        word: "bank"
+        word: "a bank"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Fbathroom-01.png?alt=media&token=8a2974d2-c079-4c54-99c9-b48bc6ea05fd",
-        word: "bathroom"
+        word: "a bathroom"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Fbeach-01.png?alt=media&token=c3d982e4-b40c-492f-98d1-ef30d713a211",
-        word: "beach"
+        word: "the beach"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Fcircus-01.png?alt=media&token=15a3c3cc-111f-467f-a54d-17bcb96e7481",
-        word: "circus"
+        word: "a circus"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Fclothing%20store%20-01.png?alt=media&token=7070c49d-9195-4962-8aa8-6ccd2a54a235",
-        word: "clothing store"
+        word: "the clothing store"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Fdentist%20office-01.png?alt=media&token=b7ad7957-f2d5-4c85-8a7f-4574cf60f790",
-        word: "dentist office"
+        word: "the dentist office"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Fdesert-01.png?alt=media&token=f22eb847-c929-4cb2-9e10-9f1eb0d30dc8",
-        word: "desert"
+        word: "a desert"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Fdrug%20store-01.png?alt=media&token=391c238a-dd76-4e43-b095-4d002adb2d15",
-        word: "drug store"
+        word: "the drug store"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Fforest-03.png?alt=media&token=7e46c0e7-ac44-4db5-ac35-bedaec889f4d",
-        word: "forest"
+        word: "a forest"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Fgas%20station.png?alt=media&token=72a73248-89fe-414a-a2f5-825df8acecfb",
@@ -636,31 +629,31 @@ export class HomeComponent implements OnInit {
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Fgrocery%20store-01.png?alt=media&token=54694e9d-5337-4618-bcfe-c4a5a4290009",
-        word: "grocery store"
+        word: "the grocery store"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Fhotel-01.png?alt=media&token=073bfa15-ca36-43ac-b1cd-67a106302c08",
-        word: "hotel"
+        word: "the hotel"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Fice%20cream%20shop-01.png?alt=media&token=a680a5f9-f1a8-4d96-a1c9-aa97aaad6bf5",
-        word: "ice cream shop"
+        word: "the ice cream shop"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Fkitchen-01.png?alt=media&token=ec750a73-3bdc-4ddf-b75f-7fd4e5a8ef99",
-        word: "kitchen"
+        word: "the kitchen"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Flibrary.png?alt=media&token=5ea15407-5de9-4966-914b-a701c94c4986",
-        word: "library"
+        word: "a library"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Fmuseum-01.png?alt=media&token=b748439d-3239-4d13-a03d-dc6035a442ed",
-        word: "museum"
+        word: "a museum"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Focean.png?alt=media&token=9a64f9a9-be70-48a3-a751-de1e6cb75a9f",
-        word: "ocean"
+        word: "an ocean"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Fpost%20office-01.png?alt=media&token=07cba86a-926d-414a-bdba-4e0d0043aba3",
@@ -668,7 +661,7 @@ export class HomeComponent implements OnInit {
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/places%20fix!%2Frestaurant-01.png?alt=media&token=12dbca1f-afde-4051-91af-c08767d434de",
-        word: "restaurant"
+        word: "a restaurant"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Places%2F%D7%94%D7%A6%D7%92%D7%94.png?alt=media&token=91f85a1f-098d-4b24-81cc-fc55fcaee74b",
@@ -680,20 +673,19 @@ export class HomeComponent implements OnInit {
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Places%2F%D7%9E%D7%98%D7%99%D7%99%D7%9C.png?alt=media&token=b86edf8f-ecc4-42e7-a9b9-4b2a683d55ea",
-        word: "trip"
+        word: "a trip"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Places%2F%D7%9E%D7%A1%D7%A4%D7%A8%D7%94.png?alt=media&token=e6c8165c-4d95-46f3-8e50-e5cea9b04a62",
-        word: "barbershop"
+        word: "the barbershop"
       },
-
     ]
   }
   shapes(): void {
     this.imgs = [
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Shapes%2F571650.svg?alt=media&token=f206b85a-ca82-4427-b758-195ba8547040",
-        word: "hexagonal"
+        word: "a hexagonal"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Shapes%2F123.png?alt=media&token=ebc34284-4546-4461-a26e-cd8e6638e6af",
@@ -701,15 +693,15 @@ export class HomeComponent implements OnInit {
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Shapes%2F414840.png?alt=media&token=c9d4635b-41fb-4b60-98a8-6035b5ec8341",
-        word: "moon"
+        word: "a moon"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Shapes%2F262430.png?alt=media&token=4697e5c0-7417-4524-8b9d-1e4e62496e1b",
-        word: "triangular"
+        word: "a triangular"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Shapes%2F137093.svg?alt=media&token=58932aca-de67-4486-998b-7c9d4f01f80f",
-        word: "Square"
+        word: "a square"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Shapes%2Fcheck.png?alt=media&token=16000033-3cae-4311-96f2-dfff76fc6fc8",
@@ -717,24 +709,28 @@ export class HomeComponent implements OnInit {
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Shapes%2F%D7%9B%D7%95%D7%9B%D7%91.svg?alt=media&token=84f6ccd3-2037-4dd2-b2f4-f3bf26a2c4eb",
-        word: "star"
+        word: "a star"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Shapes%2F%D7%9C%D7%91.svg?alt=media&token=8451d5fb-05fe-417b-b2c9-278db1d468dc",
-        word: "heart"
+        word: "a heart"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Shapes%2F%D7%A2%D7%99%D7%92%D7%95%D7%9C.svg?alt=media&token=9a57e474-59ad-42f7-8709-cf68f9809344",
-        word: "circle"
+        word: "a circle"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Shapes%2F%D7%A7%D7%95%D7%91%D7%99%D7%94.png?alt=media&token=8fddfdde-491d-40ff-80b6-f19481a33a00",
-        word: "cube"
+        word: "a cube"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Shapes%2F%D7%A9%D7%9E%D7%A9.svg?alt=media&token=dfee33b9-39b7-4335-9c29-c771c996ff32",
         word: "sun"
-      }
+      },
+      /*{
+        img: "https://firebasestorage.googleapis.com/v0/b",
+        word: "and"
+      }*/
     ]
   }
   social(): void {
@@ -765,31 +761,31 @@ export class HomeComponent implements OnInit {
     this.imgs = [
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/vegetables%2F%D7%90%D7%91%D7%95%D7%A7%D7%93%D7%95.png?alt=media&token=b97c7e97-f323-47da-ac82-ca2bc9ee90fd",
-        word: "avocado"
+        word: "an avocado"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/vegetables%2F%D7%92%D7%96%D7%A8.png?alt=media&token=e437eccc-55f3-4dd1-846d-10c8d6b59bea",
-        word: "carrot"
+        word: "a carrot"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/vegetables%2F%D7%97%D7%A1%D7%94.png?alt=media&token=fcf32ce3-294a-47d8-b0d4-aee77e4b7a88",
-        word: "lettuce"
+        word: "a lettuce"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/vegetables%2F%D7%9B%D7%A8%D7%95%D7%91.png?alt=media&token=e33ad681-d23d-4e43-b2b1-d8c28bf4be63",
-        word: "cabbage"
+        word: "a cabbage"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/vegetables%2F%D7%9C%D7%99%D7%9E%D7%95%D7%9F.png?alt=media&token=51cf1d07-4301-4e51-991c-2de8129907f3",
-        word: "lemon"
+        word: "a lemon"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/vegetables%2F%D7%9E%D7%9C%D7%A4%D7%A4%D7%95%D7%9F.png?alt=media&token=b8fb57aa-2df0-4f83-8f55-fa760b720a8e",
-        word: "cucumber"
+        word: "a cucumber"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/vegetables%2F%D7%A2%D7%92%D7%91%D7%A0%D7%99%D7%94.png?alt=media&token=98771ad8-3bae-490e-a8f9-f638a1f38dff",
-        word: "tomato"
+        word: "a tomato"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/vegetables%2F%D7%A2%D7%A0%D7%91%D7%99%D7%9D.png?alt=media&token=8b076d32-aff0-4aa7-a551-ae185b3b7926",
@@ -797,18 +793,16 @@ export class HomeComponent implements OnInit {
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/vegetables%2F%D7%A4%D7%9C%D7%A4%D7%9C.png?alt=media&token=2021c274-47c7-4642-a5f9-c7ee4ce2f895",
-        word: "gamba"
+        word: "a gamba"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/vegetables%2F%D7%A4%D7%AA%D7%9C.png?alt=media&token=6e7912be-3e1d-4150-95b4-ac8806d58f86",
-        word: "raspberry"
+        word: "a raspberry"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/vegetables%2F%D7%AA%D7%99%D7%A8%D7%A1.png?alt=media&token=d522883d-a0bb-4a77-9a22-68da08b0c7e1",
         word: "corn"
       },
-
-
     ]
   }
   numbers(): void {
@@ -853,7 +847,6 @@ export class HomeComponent implements OnInit {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Numbers%2F9.png?alt=media&token=3e95cbba-7baa-4071-b27d-8f1fc7158d81",
         word: "9"
       }
-
     ]
   }
   vehicle(): void {
@@ -952,7 +945,6 @@ export class HomeComponent implements OnInit {
       }
     ]
   }
-
   verbs(): void {
     this.imgs = [
       {
@@ -961,7 +953,7 @@ export class HomeComponent implements OnInit {
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%A4%D7%A2%D7%9C%D7%99%D7%9D%2F%D7%98%D7%9C%D7%A4%D7%95%D7%9F.svg?alt=media&token=2d475540-a7f4-4d06-895b-24c4ca4bcaee",
-        word: "Talking on the phone"
+        word: "to speak on the phone"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%A4%D7%A2%D7%9C%D7%99%D7%9D%2F%D7%9C%D7%90%D7%9B%D7%95%D7%9C.png?alt=media&token=1e4233a5-669c-4dc3-b3e6-3313b8f08809",
@@ -1004,7 +996,7 @@ export class HomeComponent implements OnInit {
         word: "to swim"
       },
       {
-        img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%A4%D7%A2%D7%9C%D7%99%D7%9D%2F%D7%9C%D7%A9%D7%97%D7%A7%20%D7%91%D7%9B%D7%93%D7%95%D7%A8.png?alt=media&token=c26775c1-d421-42b5-81a2-9972f5822190",
+        img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%A4%D7%A2%D7%9C%D7%99%D7%9D%2Fply%20in%20ball.jpg?alt=media&token=6bea06ba-7df0-433e-b926-e9b1458ef88b",
         word: "to play in ball"
       },
       {
@@ -1013,7 +1005,7 @@ export class HomeComponent implements OnInit {
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%A4%D7%A2%D7%9C%D7%99%D7%9D%2F%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%9E%D7%95%D7%96%D7%99%D7%A7%D7%94.svg?alt=media&token=5e6d9fd9-5b2e-4066-bcf3-a71e2159980b",
-        word: "listen to music"
+        word: "to listen to music"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%A4%D7%A2%D7%9C%D7%99%D7%9D%2F%D7%9C%D7%A9%D7%AA%D7%95%D7%AA.png?alt=media&token=ca5711a1-8968-46da-8619-d037708654b4",
@@ -1047,26 +1039,67 @@ export class HomeComponent implements OnInit {
     ]
   }
 
+  attributes(): void {
+    this.imgs = [
+      {
+        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2F%D7%99%D7%9E%D7%99%D7%A0%D7%94.png?alt=media&token=3530c4cc-70e3-4d9f-8023-1a6145c57ddc",
+        word:"right"
+      },
+      {
+        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2F%D7%A9%D7%9E%D7%90%D7%9C%D7%94.png?alt=media&token=c08af6b2-bb41-4635-8959-50395d2bfbe6",
+        word:"left"
+      },
+      {
+        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2F%D7%9C%D7%9E%D7%A2%D7%9C%D7%94.png?alt=media&token=c41f7c9e-9209-4bd2-aeb1-3911fb735ebf",
+        word:"up"
+      },
+      {
+        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2F%D7%9C%D7%9E%D7%98%D7%94.png?alt=media&token=d0d9345e-4f06-4526-af5c-5469d8d86864",
+        word:"down"
+      },
+      {
+        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Fback.JPG?alt=media&token=c8a83585-eb27-4a0c-b408-0ead2b32eadd",
+        word:"back"
+      },
+      {
+      img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Fabove.JPG?alt=media&token=2cd12ddd-4983-4469-b266-9989ebfe9ad8",
+      word:"above"
+      },
+    {
+      img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Fbehind.JPG?alt=media&token=7725ef56-e17c-4ded-9f5c-c1c587162101",
+      word:"behind"
+    },
+    {
+      img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Faround.JPG?alt=media&token=7032465b-6873-409c-810d-60376f2d1529",
+      word:"around"
+    },
+    {
+      img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Fand.JPG?alt=media&token=e6220712-3dbd-44b4-acf6-516401f331b6",
+      word:"and"
+    },
+    {
+      img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Finside.png?alt=media&token=105bf69b-12b7-46ca-85dd-d58a57e84b84",
+      word:"inside"
+    },
+    {
+      img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Foutside.png?alt=media&token=c3bcb843-279b-491c-8fe0-174c32405803",
+      word:"outside"
+    }
+    ]
+   }
   ngOnInit() {
   }
   add(): void {
     let dialogRef = this.dialog.open(AddContactDialog, {
       width: '380px',
-      height: '470px',
+      height: '630px',
       data: { name: this.name, phone: this.phone, imgUrl: this.imgUrl }
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       if (result) {
-
       }
     });
-
   }
 }
-
-
-
-
-
