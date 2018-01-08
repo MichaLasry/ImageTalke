@@ -1,3 +1,6 @@
+# Task Management
+### [Project Board link](https://github.com/MichaLasry/ImageTalke/projects/1)
+
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jce-il/ImageTalk)
 [![GitHub issues](https://img.shields.io/github/issues/jce-il/ImageTalke.svg?style=flat)](https://github.com/MichaLasry/ImageTalke/issues)
