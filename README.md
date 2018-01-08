@@ -1,5 +1,4 @@
-# Task Management
-### [Project Board link](https://github.com/MichaLasry/ImageTalke/projects/1)
+
 
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jce-il/ImageTalk)
@@ -25,6 +24,9 @@ Please visit our wiki for furthur project info:
 
 ### [Team Page](https://github.com/MichaLasry/ImageTalke/wiki/Team-Page)
 ### [Task Management System](https://github.com/MichaLasry/ImageTalke/issues)
+### [Project Board link](https://github.com/MichaLasry/ImageTalke/projects/1)
+
+
 
 ### Project Documents
 - [Project Idea](https://github.com/MichaLasry/ImageTalke/blob/master/Image%20talk.docx) ([Presentation](https://github.com/MichaLasry/ImageTalke/blob/master/Image%20talk%20(1).pdf))
