@@ -35,20 +35,31 @@
     top:0%;
     right:0%;
     }
-    
+    .teddy{
+    position:relative ;
+    top:3%;
+    height: 85%;
+    width: 80%;
+    //background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;   
+    overflow: scroll;
+    }
     .Letters{
         font-family:Axure Handwriting;
         font-size: 150%;
-        width: 90vw;
-        top: 9%;
+        width: 50vw;
+        top: 5%;
         padding-left: 10%;
         position: relative;
+        
     }
     
     .massage{
         width: 78.5%;
         height: 19.75%;
-        background-color: #FFF;
+      //  background-color: #FFF;
         position: absolute;
         top:89%;
         left:4%;
@@ -61,12 +72,12 @@
     .read{
       position: absolute;
         top:89%;
-        left: 81.7%;
+        left: 83%;
         width:7.5%; 
         height: 19.5%;
         border : 4px solid #8F0909;
         border-radius: 5px;
-        background-color: #Fff;
+        //background-color: #Fff;
     }
     
     .read1{
@@ -80,17 +91,17 @@
          cursor: pointer;
              
     }
-
+      
     }
     .sent{
         position: absolute;
         top:89%;
-        left:90.4%;
+        left:91.6%;
         width:7%; 
         height: 19.5%;
         border : 4px solid #8F0909;
         border-radius: 5px; 
-        background-color: #fff;
+        //background-color: #fff;
             &:hover{
         opacity:0.5;
         cursor: pointer;
@@ -119,11 +130,11 @@
         width: 11.2vw;
         height:6vh ;
         position:absolute;
-        top:49%;
+        top:48%;
         right: 2%;
         border : 4px solid #8F0909;
         border-radius: 5px; 
-        background-color: #FFF;
+        //background-color: #FFF;
         font-family:Axure Handwriting;
         font-size: 107%;
         font-weight: bold;
@@ -161,7 +172,7 @@
         right:0%;
         border : 4px solid #8F0909;
         border-radius: 5px; 
-        background-color: #Fff;
+        //background-color: #Fff;
         border-radius: 13%; 
     
     }
@@ -255,7 +266,7 @@
     }
     
     .img:active {/*on click zoom on...*/
-        //color: #FFF;
+        color: #FFF;
         -webkit-box-shadow: 1px 1px 3px #333;
         -moz-box-shadow: 1px 1px 3px #333;
         box-shadow: 1px 1px 3px #333; 
@@ -290,6 +301,7 @@
         left:91.6%;
         width:7%; 
         height: 7%;
+        //z-index:-1;
     }
     
     
@@ -303,14 +315,4 @@
     }
     
     
-    .teddy{
-    position:relative ;
-    top:3%;
-    height:100%;
-    width: 100%;
-    //background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;   
-    overflow: scroll;
-    }
+    
