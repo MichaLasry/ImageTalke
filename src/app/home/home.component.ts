@@ -1092,7 +1092,7 @@ export class HomeComponent implements OnInit {
   add(): void {
     let dialogRef = this.dialog.open(AddContactDialog, {
       width: '380px',
-      height: '630px',
+      height: '550px',
       data: { name: this.name, phone: this.phone, imgUrl: this.imgUrl }
     });
 
