@@ -69,7 +69,11 @@
         border-radius: 5px;
         display: flex;
         overflow: scroll;
+        scrollbar-face-color: rebeccapurple;
         //overflow-x: hidden;
+    }
+   .body::-webkit-scrollbar-thumb{
+        background-color: red;
     }
     
     .read{
