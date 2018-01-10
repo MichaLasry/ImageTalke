@@ -24,9 +24,9 @@
         left:80%;
     }
     
-    ::-webkit-scrollbar{
+    /*::-webkit-scrollbar{
     visibility: hidden;
-    }
+    }*/
     
     .main{
     width:73%;
@@ -69,12 +69,9 @@
         border-radius: 5px;
         display: flex;
         overflow: scroll;
-        scrollbar-face-color: rebeccapurple;
         //overflow-x: hidden;
     }
-   .body::-webkit-scrollbar-thumb{
-        background-color: red;
-    }
+ 
     
     .read{
       position: absolute;
@@ -86,7 +83,9 @@
         border-radius: 5px;
         //background-color: #Fff;
     }
-    
+ 
+::-webkit-scrollbar {width: 0.1px; height: 0.1px; }
+::-webkit-scrollbar-thumb { background-color: transparent; -webkit-border-radius: 1ex; }‏   
     .read1{
         position: absolute;
         top:10%;
@@ -174,11 +173,11 @@
     }
     
     .contact1{
-        width: 25%;
+        width: 22%;
         height:20% ;
         position:absolute;
         top:2.5%;
-        right:0%;
+        right:2%;
         border : 4px solid #8F0909;
         border-radius: 5px; 
         background-color: transparent;
@@ -189,9 +188,9 @@
     .add_contact{
         width: 98%;
         height:88% ;
-        position:absolute;
+        position: absolute;;
         top:32.5%;
-        left:2.5%;
+        right: -2.5%;
         &:hover{
         opacity:0.5;
         cursor: pointer;

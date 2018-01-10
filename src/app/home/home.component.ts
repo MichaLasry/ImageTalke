@@ -110,6 +110,10 @@ export class HomeComponent implements OnInit {
         word: "a dog"
       },
       {
+      img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F%D7%AA%D7%A8%D7%92%D7%95%D7%9C.png?alt=media&token=89b2cd31-34f3-422a-83cf-ed582676bf96",
+      word:"a chicken"
+      },
+      {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F194954.png?alt=media&token=71509882-7f2f-4a09-a152-c0f6b2aa5c62",
         word: "a frog"
       },
@@ -1035,6 +1039,10 @@ export class HomeComponent implements OnInit {
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9E%D7%9B%D7%A9%D7%99%D7%A8%D7%99%20%D7%9B%D7%AA%D7%99%D7%91%D7%94%2F%D7%A2%D7%99%D7%A4%D7%A8%D7%95%D7%9F.svg?alt=media&token=8aaafe0a-c12b-4dc7-b0c3-01a2b7bafc32",
         word: "a pencil"
+      },
+      {
+        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9E%D7%9B%D7%A9%D7%99%D7%A8%D7%99%20%D7%9B%D7%AA%D7%99%D7%91%D7%94%2F%D7%93%D7%91%D7%A7.png?alt=media&token=fffa0ad8-a9d5-4c37-a315-5330a9448cf5",
+        word:"a glue"
       }
     ]
   }

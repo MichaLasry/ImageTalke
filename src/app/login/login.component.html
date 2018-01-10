@@ -5,7 +5,7 @@
 			</div>
 			<form class="form" action="/action_page">
 	
-			<input type="text"  id="Username"  onsubmit="myFunction()"  pattern="[A-Za-z]{}" placeholder="username" required>
+			<input type="text"  id="UserName"  onsubmit="myFunction()"  pattern="[A-Za-z]{}" placeholder="UserName" required>
 			<input type="number" id="PelephoneNumber"	placeholder="Phone number" required>
 			<!--[(ngModel)]="phone"-->
 			<button (click)=home() type="Submit" class="Submit" id="login-button">Login</button>
@@ -17,12 +17,12 @@
     	$('#logo').addClass('animated fadeInDown');
     	$("input:text:visible:first").focus();
 	});
-	$('#username').focus(function() {
-		$('label[for="username"]').addClass('selected');
+	$('#UserName').focus(function() {
+		$('label[for="UserName"]').addClass('selected');
 	});
 	
-	$('#username').blur(function() {
-		$('label[for="username"]').removeClass('selected');
+	$('#UserName').blur(function() {
+		$('label[for="UserName"]').removeClass('selected');
 	});
 	$('#password').focus(function() {
 		$('label[for="password"]').addClass('selected');

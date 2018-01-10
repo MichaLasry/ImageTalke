@@ -15,16 +15,16 @@ import { AngularFireAuthModule } from 'angularfire2/auth'
     styleUrls: ["add-contact-dialog.component.scss"]
 })
 export class AddContactDialog {
-    public contactname:string;
-    public contactphone:number;
-    public contactimg:ImageData;
+    public ContactName:string;
+    public ContactPhone:number;
+    public ContactImg:ImageData;
 
     constructor(
        public dialogRef: MatDialogRef<AddContactDialog>,
         @Inject(MAT_DIALOG_DATA) public data: any,public router:Router, private afs: AngularFirestore,/* public firebaseService: Firebase*/) {
-            this.contactname="";
-            this.contactphone=null;
-            this.contactimg=null;
+            this.ContactName="";
+            this.ContactPhone=null;
+            this.ContactImg=null;
 
     }
 

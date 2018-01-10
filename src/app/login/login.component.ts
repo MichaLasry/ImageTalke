@@ -11,10 +11,10 @@ import { Firebase } from '../firebase.service' ;
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  public username?:string;
+  public UserName?:string;
    public phone?:number;
   constructor( public router:Router, private afs: AngularFirestore, public firebaseService: Firebase ) { 
-    this.username="";
+    this.UserName="";
     this.phone=null;
   }
   Submit()
@@ -22,11 +22,12 @@ export class LoginComponent implements OnInit {
   //this.firebase.Submit(this.username,this.phone);
    
   }
+  /*
     home() : void
     {
-        let userName= document.getElementById('Username');
+        let UserName= document.getElementById('UserName');
         let PelephoneNumber= document.getElementById('PelephoneNumber');
-    if (userName.textContent=="")
+    if (UserName.textContent=="")
     {
       alert("enter the user name");
     }
@@ -34,8 +35,8 @@ export class LoginComponent implements OnInit {
     {
       alert("enter Phone number");
     }
-      this.router.navigate(["home"]);
-    }
+    his.router.navigate(["home"]);
+    }*/
   ngOnInit() {
   }
 }

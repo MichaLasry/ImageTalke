@@ -1,13 +1,12 @@
 export class contact{
     
-        cotactname:string;
-        contactphone:number;
-        contactimg:ImageData;
-        firstLogin: boolean = false;
+        CotactName:string;
+        ContactPhone:number;
+        ContactImg:ImageData;
 
         constructor(contact) {
-            this.cotactname=contact.cotactname;
-            this.contactphone=contact.contactphone;
-            this.contactimg=contact.contactimg;
+            this.CotactName=contact.CotactName;
+            this.ContactPhone=contact.ContactPhone;
+            this.ContactImg=contact.ContactImg;
         }   
 }

@@ -5,14 +5,14 @@
             <h2>Add contact</h2>
         </div>
         <div class="form">
-            <input type="text" [(ngModel)]="contactname" placeholder="Contact name" class="txt1" required>
+            <input type="text" [(ngModel)]="ContactName" placeholder="Contact name" class="txt1" required>
             <br/>
-            <input type="Pelephone number" [(ngModel)]="contactphone" placeholder="Phone number" class="txt2" required>
+            <input type="number" minlength="10" maxlength="10" [(ngModel)]="ContactPhone" placeholder="Phone number" class="txt2" required>
             <br/>
             <br/>
             <div input action="/action_page">
                 <input #uploadPic class="picter" type="file" (change)="upload(uploadPic.files)" name="pic" accept="image/*">
-                <button  [(ngModel)]="contactimg" (click)="uploadPic.click()" mat-rasied-button class="b_add" required >+add picture</button>
+                <button  [(ngModel)]="ContactImg" (click)="uploadPic.click()" mat-rasied-button class="b_add" required >+add picture</button>
             <br/>
             <br/>
              <br/>
