@@ -36,26 +36,27 @@
     right:0%;
     }
     .teddy{
-    position:relative ;
-    top:3%;
-    height: 85%;
-    width: 80%;
-    //background-color: gray;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;   
-    overflow: scroll;
+            position:relative ;
+            top:3%;
+            height: 85%;
+            width: 80%;
+            background-color: gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;   
+            overflow: scroll;
     }
     .Letters{
-        font-family:Axure Handwriting;
-        font-size: 150%;
-        width: 50vw;
-        top: 5%;
-        padding-left: 10%;
-        position: relative;
+            font-family:Axure Handwriting;
+            font-size: 135%;
+            width: 50vw;
+            top: 0%;
+            padding-left: 3%;
+            position: relative;
+            font-weight:bold;
         
     }
-    
+ 
     .massage{
         width: 78.5%;
         height: 19.75%;
