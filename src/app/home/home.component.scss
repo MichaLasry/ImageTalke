@@ -40,18 +40,19 @@
             top:3%;
             height: 85%;
             width: 80%;
-            background-color: gray;
+            //background-color: gray;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;   
             overflow: scroll;
+            //overflow-x: hidden;
     }
     .Letters{
             font-family:Axure Handwriting;
             font-size: 135%;
             width: 50vw;
             top: 0%;
-            padding-left: 3%;
+            padding-left: 4%;
             position: relative;
             font-weight:bold;
         
@@ -68,12 +69,13 @@
         border-radius: 5px;
         display: flex;
         overflow: scroll;
+        //overflow-x: hidden;
     }
     
     .read{
       position: absolute;
         top:89%;
-        left: 83%;
+        left: 82%;
         width:7.5%; 
         height: 19.5%;
         border : 4px solid #8F0909;
@@ -97,7 +99,7 @@
     .sent{
         position: absolute;
         top:89%;
-        left:91.6%;
+        left:91%;
         width:7%; 
         height: 19.5%;
         border : 4px solid #8F0909;
@@ -135,13 +137,15 @@
         right: 2%;
         border : 4px solid #8F0909;
         border-radius: 5px; 
-        //background-color: #FFF;
+         background-color: transparent;
+         //background-color: #FFF;
         font-family:Axure Handwriting;
         font-size: 107%;
         font-weight: bold;
             &:hover{
          opacity:0.5;
          cursor: pointer;
+         
         }
     }
     
@@ -173,9 +177,9 @@
         right:0%;
         border : 4px solid #8F0909;
         border-radius: 5px; 
-        //background-color: #Fff;
+        background-color: transparent;
         border-radius: 13%; 
-    
+       
     }
     
     .add_contact{
