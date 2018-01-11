@@ -1,17 +1,27 @@
-	<div class="container">
+<div id="recaptcha-container">
+	
+</div>
+<div class="container">
 		<div class="login-box animated fadeInUp">
 			<div class="box-header">
 				<h2>Welcome</h2>
 			</div>
 			<form class="form" action="/action_page">
 	
-			<input type="text"  id="UserName"  onsubmit="myFunction()"  pattern="[A-Za-z]{}" placeholder="UserName" required>
-			<input type="number" id="PelephoneNumber"	placeholder="Phone number" required>
-			<!--[(ngModel)]="phone"-->
-			<button (click)=home() type="Submit" class="Submit" id="login-button">Login</button>
+			<input type="text" [(ngModel)]="UserName" onsubmit="myFunction()" name="UserName"  pattern="[A-Za-z]{}" placeholder="UserName">
+			<div id="UserName" style="color:transparent; display:none">
+			  The user name is required.
+			</div>
+		  
+			<input type="number" [(ngModel)]="phone" name="phone" placeholder="Phone number">
+			<div id="PelephoneNumber" style="color:transparent; display:none">
+				The phone is required.
+			  </div>
+			<button (click)=login() type="Submit" class="Submit" id="login-button">Login</button>
 		</form>
 		</div>
 	</div>
+	
 	<script>
 	$(document).ready(function () {
     	$('#logo').addClass('animated fadeInDown');

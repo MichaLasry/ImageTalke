@@ -17,6 +17,8 @@ import { Observable } from 'rxjs/Observable';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth'
+import { Firebase } from './firebase.service';
+import * as firebase from 'firebase';
 
 
 
@@ -58,12 +60,15 @@ export const environment = {
     //AngularFireModule.initializeApp(firebaseConfig),
     //להוסיף קומפוננט לדוג' :https://github.com/angular-university/angular-firebase-app/blob/master/src/environments/firebase.config.ts
    //https://alligator.io/angular/cloud-firestore-angularfire/
-   AngularFirestoreModule.enablePersistence(),
+  //  AngularFirestoreModule.enablePersistence(),
     MatIconModule,
     BrowserModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
-  providers: [],
+  providers: [
+    Firebase
+  ],
   entryComponents: [
     AddContactDialog,
   ],
