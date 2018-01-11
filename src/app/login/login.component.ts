@@ -4,7 +4,7 @@ import { user } from '../models/user.model';
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { Firebase } from '../firebase.service';
-//import * as firebase from 'firebase/app';
+import * as firebase from 'firebase/app';
 
 
 
@@ -17,22 +17,26 @@ import { Firebase } from '../firebase.service';
 export class LoginComponent implements OnInit{
   public UserName: string;
   public phone: number;
-  private itemdoc:AngularFirestoreDocument<any>;
+  private userdoc:AngularFirestoreDocument<user>;
 
   //phoneRecaptchaVerifier: firebase.auth.RecaptchaVerifier
   constructor(public router: Router, private afs: AngularFirestore, public firebaseService: Firebase) {
     
-    this.itemdoc=this.afs.doc("users/" +this.firebaseService.getEmail()); 
-    this.itemdoc.valueChanges().subscribe(res=>{
+    this.userdoc=this.afs.doc("users/" +this.firebaseService.getEmail()); 
+    this.userdoc.valueChanges().subscribe(res=>{
       
       this.UserName=res.UserName;
       this.phone=res.phone;
+    });
+  }
+    /* loginWithGoogle(){
+      this.authService.loginWithGoogle();
+      this.router.navigate(["home"])
+    } 
+  */
+  
 
   
-    
-    });
-    
-  }
   login(){
     if(this.UserName==""||this.phone==null)
     {
@@ -50,14 +54,14 @@ export class LoginComponent implements OnInit{
     }
     else{
       this.firebaseService.updateUser(this.UserName,this.phone);
-      this.router.navigate(["home"]);
+      
       
     }
   }
-  Submit() {
+  //Submit() {
     //this.firebase.Submit(this.username,this.phone);
 
-  }
+  //}
   /*
     home() : void
     {
@@ -73,9 +77,9 @@ export class LoginComponent implements OnInit{
     }
     his.router.navigate(["home"]);
     }*/
-  ngAfterViewInit() {
+ // ngAfterViewInit() {
     // this.phoneRecaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
-  }
+  //}
 
   //login() {
     // this.phoneRecaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', {

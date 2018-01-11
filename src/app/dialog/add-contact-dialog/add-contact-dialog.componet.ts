@@ -2,7 +2,7 @@ import { Component, Inject } from "@angular/core";
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import * as firebase from 'firebase/app';
 import { Router } from "@angular/router";
-//import { contact } from './models/contat.model';
+import { contact } from './models/contat.model';
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 //import { Firebase } from 'firebase/' ;
