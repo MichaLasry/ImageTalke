@@ -58,10 +58,6 @@ export const environment = {
     MatDialogModule,
     MatButtonModule,
     AngularFireModule.initializeApp(environment.firebase),
-    //AngularFireModule.initializeApp(firebaseConfig),
-    //להוסיף קומפוננט לדוג' :https://github.com/angular-university/angular-firebase-app/blob/master/src/environments/firebase.config.ts
-   //https://alligator.io/angular/cloud-firestore-angularfire/
-  //  AngularFirestoreModule.enablePersistence(),
     MatIconModule,
     BrowserModule,
     AngularFirestoreModule,
