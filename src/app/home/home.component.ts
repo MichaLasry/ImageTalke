@@ -1120,7 +1120,7 @@ export class HomeComponent implements OnInit {
       }
       */
 
-      if (result) {
+      if (result == true) {
         let cn = new contact({ ContactName: this.name, ContactPhone: this.phone });
         this.fs.addContact(cn).then(id=>{
           let contact = this.as.addContact(id);

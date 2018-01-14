@@ -31,6 +31,7 @@ export class AddContactDialog {
         this.dialogRef.close();        
     }
 
+
     submit(){
         this.dialogRef.close(this.data);
     }
