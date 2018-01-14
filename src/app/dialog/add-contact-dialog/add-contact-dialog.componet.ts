@@ -15,7 +15,7 @@ export class AddContactDialog {
     public ContactPhone:number;
     public ContactImg:ImageData;
     constructor(
-       public dialogRef: MatDialogRef<AddContactDialog>,
+       public dialogRef: MatDialogRef<AddContactDialog>,public dialog: MatDialog,
         @Inject(MAT_DIALOG_DATA) public data: any,public router:Router, private afs: AngularFirestore,/* public firebaseService: Firebase*/) {
             this.ContactName="";
             this.ContactPhone=null;
@@ -27,6 +27,15 @@ export class AddContactDialog {
     submit(){
         this.dialogRef.close(this.data);
     }
+    openDialog(){
+        let dialogRef = this.dialog.open(AddContactDialog, {
+            width: '250px',
+            data: {ContactName : this.ContactName, ContactPhone: this.ContactPhone }
+          });
+          this.dialog.closeAll();
+          this.dialogRef.close();
+    }
+    
     upload(e){
         console.log(e);
     }
