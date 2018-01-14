@@ -48,7 +48,7 @@ export class Firebase {
     this.userRef.set(user);
     // this.router.navigate(["home"]);
   }
-  public updateContact(contact){   
+  public updateContact(contact){//מעדכנת את איש הקשר בשרת
     this.contactsRef = this.afsDocument.collection("contacts/" + contact.contactname + contact.contactphone);
     this.contactsRef.add("contacts/");
   }
@@ -101,18 +101,4 @@ export class Firebase {
 
     })
   }
-
-  // public Submit(username, phone) {
-  //   //console.log();
-  //   this.userRef.doc().set({
-  //     username: username,
-  //     phone: phone
-  //   });
-  //   this.router.navigate(["home"]);
-
-  // }
-
-
-
-
 }
