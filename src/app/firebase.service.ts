@@ -15,7 +15,9 @@ export class Firebase {
   public auth;
   private _profile;
   private username: string;
-  private phone: number;
+  private phone: string;
+  private contactname: string;
+  private contactphone: string;
   private image: ImageData;
   public userRef;
   private _email: string;
@@ -42,9 +44,13 @@ export class Firebase {
   }
   public updateUser(user)//מעדכנת את הנתונים בשרת
   {
-    this.userRef = this.afsDocument.doc("users/" + user.username);
+    this.userRef = this.afsDocument.doc("users/" + user.username + user.phone);
     this.userRef.set(user);
     // this.router.navigate(["home"]);
+  }
+  public updateContact(contact){   
+    this.contactsRef = this.afsDocument.collection("contacts/" + contact.contactname + contact.contactphone);
+    this.contactsRef.add("contacts/");
   }
   logout() {
     this.afAuth.auth.signOut();

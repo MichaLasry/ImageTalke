@@ -5,6 +5,7 @@ import { AddContactDialog } from "../dialog/add-contact-dialog/add-contact-dialo
 import { user } from "../models/user.model"
 import { Firebase } from '../firebase.service';
 import { AuthService } from '../auth.service';
+import { contact } from '../models/contact.model';
 
 @Component({
   selector: 'app-home',
@@ -1103,20 +1104,29 @@ export class HomeComponent implements OnInit {
   add(): void {
     let dialogRef = this.dialog.open(AddContactDialog, {
       width: '380px',
-      height: '550px',
+      height: '450px',
       data: { name: this.name, phone: this.phone, imgUrl: this.imgUrl }
     });
 
     dialogRef.afterClosed().subscribe(result => {
 
       // console.log('The dialog was closed');
-      if (result) {
+     /* if (result) {
         let u = new user({ UserName: this.name, phone: this.phone });
         this.fs.addContact(u).then(id=>{
           let user = this.as.addContact(id);
           this.fs.updateUser(user);
         })
       }
+      */
+
+      if (result) {
+        let cn = new contact({ ContactName: this.name, ContactPhone: this.phone });
+        this.fs.addContact(cn).then(id=>{
+          let contact = this.as.addContact(id);
+          this.fs.updateContact(contact);
+        })
+      } 
     });
   }
 }

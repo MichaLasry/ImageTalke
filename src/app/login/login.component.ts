@@ -50,15 +50,6 @@ export class LoginComponent implements OnInit {
     // this.phoneRecaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
   //}
 
-  //login() {
-    // this.phoneRecaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', {
-    //   'size': 'invisible',
-    //   'callback': (response) => {
-    //     // reCAPTCHA solved, allow signInWithPhoneNumber.
-
-    //   }
-    // });
-  //}
 */
   ngOnInit() {
   }
