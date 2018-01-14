@@ -45,7 +45,7 @@ export class Firebase {
   }
   public updateUser(user)//מעדכנת את הנתונים בשרת
   {
-    this.userRef = this.afsDocument.doc("users/" + user.username + user.phone + user.contactId+this.contactsRef);
+    this.userRef = this.afsDocument.doc("users/" + user.username);
     this.userRef.set(user);
     // this.router.navigate(["home"]);
   }
