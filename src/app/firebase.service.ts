@@ -82,7 +82,6 @@ export class Firebase {
     return this.username;
 
   }
-
   public getPhone() {
     if (this.afAuth.auth.currentUser)
       this.username = this.afAuth.auth.currentUser.phoneNumber;
@@ -91,8 +90,6 @@ export class Firebase {
     return this.phone;
 
   }
-
-
   public addContact(contact) {
     return new Promise((res, rej) => {
       this.contactsRef.add(contact).then(c => {
