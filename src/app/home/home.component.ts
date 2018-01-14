@@ -1127,6 +1127,7 @@ export class HomeComponent implements OnInit {
           this.fs.updateUser(contact);
         })
       } 
+      else{console.log("www"); }
     });
   }
 }
