@@ -49,10 +49,11 @@ export class Firebase {
     this.userRef.set(user);
     // this.router.navigate(["home"]);
   }
-  public updateContact(contact){//מעדכנת את איש הקשר בשרת
+ /* public updateContact(contact){//מעדכנת את איש הקשר בשרת
     this.contactsRef = this.afsDocument.collection("contacts/" + contact.contactname + contact.contactphone);
     this.contactsRef.add("contacts/");
   }
+  */
   logout() {
     this.afAuth.auth.signOut();
   }
