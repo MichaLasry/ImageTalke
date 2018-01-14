@@ -30,27 +30,7 @@ export class LoginComponent implements OnInit {
       this.phone=res.phone;
     });*/
   }
-  /*
-  login(){
-    if(this.UserName==""||this.phone==null)
-    {
-     document.getElementById("UserName").style.display="none";
-     document.getElementById("phone").style.display="none";
 
-     if(this.UserName=="")
-     {
-      document.getElementById("UserName").style.display="block";
-     }
-     if(this.phone==null)
-     {
-      document.getElementById("phone").style.display="block";
-     }
-    }
-    else{
-      this.firebaseService.updateUser(this.UserName,this.phone); 
-    }
-  }
-  */
   async loginWithGoogle() {
     await this.authService.loginWithGoogle();
     if(this.UserName != "" && this.phone != "")

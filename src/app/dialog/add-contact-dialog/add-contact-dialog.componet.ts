@@ -28,15 +28,13 @@ export class AddContactDialog {
     }
 
     onNoClick(): void {
-        this.dialogRef.close();
+        this.dialogRef.close();        
     }
 
     submit(){
         this.dialogRef.close(this.data);
     }
-home(){
-    this.router.navigate(["home"]);
-}
+   
     upload(e){
         console.log(e);
     }

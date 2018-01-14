@@ -15,7 +15,7 @@ import { Router } from "@angular/router";
 @Injectable()
 export class AuthService {
   private _user;
-  //private _email:string;
+
   constructor(public afAuth: AngularFireAuth) { }
 
 
@@ -35,14 +35,6 @@ export class AuthService {
     this._user.contactId ? this._user.contactId.push(id) : this._user.contactId = [id];
     return this._user;
   }
-  /*public getEmail() {
-    if (this.afAuth.auth.currentUser)
-      this._email=this.afAuth.auth.currentUser.email;
-    else
-      this._email = "";
-    return this._email;
-  }
- */
   public loginWIthEmail(email: string, password: string) {
     this.afAuth.auth.signInWithEmailAndPassword(email, password)
       .then(user => {
@@ -61,11 +53,6 @@ export class AuthService {
     console.log(!!this.afAuth.auth.currentUser)
     return !!this.afAuth.auth.currentUser;
   }
-
-  /* public get nameAndFname() {
-     return this._user ? this._user.displayName : "guest";
-   }
- */
   logout() {
     this.afAuth.auth.signOut();
   }
