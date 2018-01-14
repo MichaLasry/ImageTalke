@@ -24,14 +24,11 @@ export class AddContactDialog {
             this.ContactName="";
             this.ContactPhone=null;
             this.ContactImg=null;
-
     }
 
     onNoClick(): void {
         this.dialogRef.close();        
     }
-
-
     submit(){
         this.dialogRef.close(this.data);
     }
