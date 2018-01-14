@@ -19,6 +19,7 @@ export class Firebase {
   private contactname: string;
   private contactphone: string;
   private image: ImageData;
+  private contactl: string;
   public userRef;
   private _email: string;
   private contactsRef: AngularFirestoreCollection<any>;
@@ -44,7 +45,7 @@ export class Firebase {
   }
   public updateUser(user)//מעדכנת את הנתונים בשרת
   {
-    this.userRef = this.afsDocument.doc("users/" + user.username + user.phone);
+    this.userRef = this.afsDocument.doc("users/" + user.username + user.phone + user.contactId+this.contactsRef);
     this.userRef.set(user);
     // this.router.navigate(["home"]);
   }
