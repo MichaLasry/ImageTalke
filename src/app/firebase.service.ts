@@ -4,63 +4,55 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { AngularFirestoreDocument, AngularFirestore, AngularFirestoreCollection } from "angularfire2/firestore";
 import { Component } from '@angular/core';
-
-
 import { user } from './models/user.model';
-
-
 import { Router } from "@angular/router";
+import { CalendarEvent } from "angular-calendar";
+
+
+
 @Injectable()
 export class Firebase {
   public auth;
-  private _profile;  
+  private _profile;
   private username: string;
   private phone: number;
   private image: ImageData;
   public userRef;
-  private _email:string;
-
-  
-  
+  private _email: string;
+  private contactsRef: AngularFirestoreCollection<any>;
 
   constructor(public afAuth: AngularFireAuth, private afsDocument: AngularFirestore, public router: Router) {
-    this.userRef = this.afsDocument.doc("users");
+    this.contactsRef = this.afsDocument.collection("contacts");
     firebase.auth().languageCode = "en";
-    
-
   }
-  
   async login() {
     let u = await this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
     console.log(u);
-    return this.getUserData(u.user.email);
-    //u.user.photoURL
+    //return this.getUserData(u.user.email);
   }
 
-  logout() {
-    this.afAuth.auth.signOut();
-  }
   private getUserData(username: string) { //פעם אחת נקרא לפונקציה היא מאזינה לכל הנתונים של המשתמש
-    return new Promise((res, rej)=>{
+    return new Promise((res, rej) => {
       this.afsDocument.doc("users/" + username).valueChanges().subscribe(user => {
         this._profile = user;
         res(this._profile);
       });
     });
-    
+
   }
-
-
- /* public updateUser(username:string,phone:number,image:ImageData){//מעדכנת את הנתונים בשרת
-    this.username=username;
-    this.phone=phone;
-    this.image=image;
-  }*/
-
+  public updateUser(user)//מעדכנת את הנתונים בשרת
+  {
+    this.userRef = this.afsDocument.doc("users/" + user.username);
+    this.userRef.set(user);
+    // this.router.navigate(["home"]);
+  }
+  logout() {
+    this.afAuth.auth.signOut();
+  }
 
   public getEmail() {
     if (this.afAuth.auth.currentUser)
-      this._email=this.afAuth.auth.currentUser.email;
+      this._email = this.afAuth.auth.currentUser.email;
     else
       this._email = "";
     return this._email;
@@ -71,42 +63,10 @@ export class Firebase {
   }
 
   private update() {
-    if( this.getUserName().length  > 0)
+    if (this.getUserName().length > 0)
       this.afsDocument.doc("users/" + this.username).set(this._profile).then(res => {
       });
   }
-  
-
-  public updateUser(username,phone)//מעדכנת את הנתונים בשרת
-  { 
-    this.userRef.doc(this.getEmail()).set({
-     username:username,
-     phone:phone, 
-    });
-    this.router.navigate(["home"]);
-  }
-
-
- /* public updateUser() {
-    this.afAuth.auth.signInWithPopup(  
-    new firebase.auth.GoogleAuthProvider()).then(user => {
-    let verify= user.additionalUserInfo.profile.verified_email;
-    if(verify){
-    let email = user.additionalUserInfo.profile.email;
-    if(this.exist_user(email))
-    {
-    this.isLogin= true;
-    return;
-    }
-    else{
-      this.isLogin= false;
-    return;
-    }
-  }
-      
-      });
-  }*/
-    
   public getUserName() {
 
     if (this.afAuth.auth.currentUser)
@@ -117,9 +77,6 @@ export class Firebase {
 
   }
 
-
-
-
   public getPhone() {
     if (this.afAuth.auth.currentUser)
       this.username = this.afAuth.auth.currentUser.phoneNumber;
@@ -129,15 +86,25 @@ export class Firebase {
 
   }
 
-  public Submit(username, phone) {
-    //console.log();
-    this.userRef.doc().set({
-      username: username,
-      phone: phone
-    });
-    this.router.navigate(["home"]);
 
+  public addContact(contact) {
+    return new Promise((res, rej) => {
+      this.contactsRef.add(contact).then(c => {
+        res(c.id);
+      })
+
+    })
   }
+
+  // public Submit(username, phone) {
+  //   //console.log();
+  //   this.userRef.doc().set({
+  //     username: username,
+  //     phone: phone
+  //   });
+  //   this.router.navigate(["home"]);
+
+  // }
 
 
 

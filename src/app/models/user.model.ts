@@ -3,7 +3,7 @@ export class user{
         UserName:string;
         phone:number;
         firstLogin: boolean = false;
-        contact:any[];
+        contactId:any[];
 
         constructor(user) {
             this.UserName=user.UserName;

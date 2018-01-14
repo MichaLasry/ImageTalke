@@ -3,8 +3,9 @@
 </div>
 <div class="container">
 		<div class="login-box animated fadeInUp">
+
 			<div class="box-header">
-				<h2>Welcome</h2>
+				<h2>Welcome {{authService.nameAndFname}}</h2>
 			</div>
 			<form class="form" action="/action_page">
 	
@@ -13,11 +14,11 @@
 			  The user name is required.
 			</div>
 		  
-			<input type="number" [(ngModel)]="phone" name="phone" placeholder="Phone number">
+			<input type="text" [(ngModel)]="phone" name="phone" placeholder="Phone number">
 			<div id="PelephoneNumber" style="color:transparent; display:none">
 				The phone is required.
 			  </div>
-			<button (click)=login() type="Submit" class="Submit" id="login-button">Login</button>
+			<button (click)=loginWithGoogle() type="Submit" class="Submit" id="login-button">Login</button>
 	
 		</form>
 		</div>

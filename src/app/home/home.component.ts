@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { AddContactDialog } from "../dialog/add-contact-dialog/add-contact-dialog.componet";
+import { user } from "../models/user.model"
+import { Firebase } from '../firebase.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +20,7 @@ export class HomeComponent implements OnInit {
   imagesArray = [];
   private _text: string[] = [];
   public imgSelect: any[] = [];
-  constructor(public router: Router, public dialog: MatDialog) {
+  constructor(public router: Router,private fs : Firebase, private as: AuthService  ,public dialog: MatDialog) {
     this.verbs();
   }
 
@@ -110,8 +113,8 @@ export class HomeComponent implements OnInit {
         word: "a dog"
       },
       {
-      img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F%D7%AA%D7%A8%D7%92%D7%95%D7%9C.png?alt=media&token=89b2cd31-34f3-422a-83cf-ed582676bf96",
-      word:"a chicken"
+        img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F%D7%AA%D7%A8%D7%92%D7%95%D7%9C.png?alt=media&token=89b2cd31-34f3-422a-83cf-ed582676bf96",
+        word: "a chicken"
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Animals%2F194954.png?alt=media&token=71509882-7f2f-4a09-a152-c0f6b2aa5c62",
@@ -1041,8 +1044,8 @@ export class HomeComponent implements OnInit {
         word: "a pencil"
       },
       {
-        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9E%D7%9B%D7%A9%D7%99%D7%A8%D7%99%20%D7%9B%D7%AA%D7%99%D7%91%D7%94%2F%D7%93%D7%91%D7%A7.png?alt=media&token=fffa0ad8-a9d5-4c37-a315-5330a9448cf5",
-        word:"a glue"
+        img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9E%D7%9B%D7%A9%D7%99%D7%A8%D7%99%20%D7%9B%D7%AA%D7%99%D7%91%D7%94%2F%D7%93%D7%91%D7%A7.png?alt=media&token=fffa0ad8-a9d5-4c37-a315-5330a9448cf5",
+        word: "a glue"
       }
     ]
   }
@@ -1050,51 +1053,51 @@ export class HomeComponent implements OnInit {
   attributes(): void {
     this.imgs = [
       {
-        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2F%D7%99%D7%9E%D7%99%D7%A0%D7%94.png?alt=media&token=3530c4cc-70e3-4d9f-8023-1a6145c57ddc",
-        word:"right"
+        img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2F%D7%99%D7%9E%D7%99%D7%A0%D7%94.png?alt=media&token=3530c4cc-70e3-4d9f-8023-1a6145c57ddc",
+        word: "right"
       },
       {
-        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2F%D7%A9%D7%9E%D7%90%D7%9C%D7%94.png?alt=media&token=c08af6b2-bb41-4635-8959-50395d2bfbe6",
-        word:"left"
+        img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2F%D7%A9%D7%9E%D7%90%D7%9C%D7%94.png?alt=media&token=c08af6b2-bb41-4635-8959-50395d2bfbe6",
+        word: "left"
       },
       {
-        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2F%D7%9C%D7%9E%D7%A2%D7%9C%D7%94.png?alt=media&token=c41f7c9e-9209-4bd2-aeb1-3911fb735ebf",
-        word:"up"
+        img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2F%D7%9C%D7%9E%D7%A2%D7%9C%D7%94.png?alt=media&token=c41f7c9e-9209-4bd2-aeb1-3911fb735ebf",
+        word: "up"
       },
       {
-        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2F%D7%9C%D7%9E%D7%98%D7%94.png?alt=media&token=d0d9345e-4f06-4526-af5c-5469d8d86864",
-        word:"down"
+        img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2F%D7%9C%D7%9E%D7%98%D7%94.png?alt=media&token=d0d9345e-4f06-4526-af5c-5469d8d86864",
+        word: "down"
       },
       {
-        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Fback.JPG?alt=media&token=c8a83585-eb27-4a0c-b408-0ead2b32eadd",
-        word:"back"
+        img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Fback.JPG?alt=media&token=c8a83585-eb27-4a0c-b408-0ead2b32eadd",
+        word: "back"
       },
       {
-      img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Fabove.JPG?alt=media&token=2cd12ddd-4983-4469-b266-9989ebfe9ad8",
-      word:"above"
+        img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Fabove.JPG?alt=media&token=2cd12ddd-4983-4469-b266-9989ebfe9ad8",
+        word: "above"
       },
-    {
-      img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Fbehind.JPG?alt=media&token=7725ef56-e17c-4ded-9f5c-c1c587162101",
-      word:"behind"
-    },
-    {
-      img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Faround.JPG?alt=media&token=7032465b-6873-409c-810d-60376f2d1529",
-      word:"around"
-    },
-    {
-      img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Fand.JPG?alt=media&token=e6220712-3dbd-44b4-acf6-516401f331b6",
-      word:"and"
-    },
-    {
-      img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Finside.png?alt=media&token=105bf69b-12b7-46ca-85dd-d58a57e84b84",
-      word:"inside"
-    },
-    {
-      img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Foutside.png?alt=media&token=c3bcb843-279b-491c-8fe0-174c32405803",
-      word:"outside"
-    }
+      {
+        img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Fbehind.JPG?alt=media&token=7725ef56-e17c-4ded-9f5c-c1c587162101",
+        word: "behind"
+      },
+      {
+        img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Faround.JPG?alt=media&token=7032465b-6873-409c-810d-60376f2d1529",
+        word: "around"
+      },
+      {
+        img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Fand.JPG?alt=media&token=e6220712-3dbd-44b4-acf6-516401f331b6",
+        word: "and"
+      },
+      {
+        img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Finside.png?alt=media&token=105bf69b-12b7-46ca-85dd-d58a57e84b84",
+        word: "inside"
+      },
+      {
+        img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2Foutside.png?alt=media&token=c3bcb843-279b-491c-8fe0-174c32405803",
+        word: "outside"
+      }
     ]
-   }
+  }
   ngOnInit() {
   }
   add(): void {
@@ -1105,8 +1108,14 @@ export class HomeComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+
+      // console.log('The dialog was closed');
       if (result) {
+        let u = new user({ UserName: this.name, phone: this.phone });
+        this.fs.addContact(u).then(id=>{
+          let user = this.as.addContact(id);
+          this.fs.updateUser(user);
+        })
       }
     });
   }
