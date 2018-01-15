@@ -38,8 +38,9 @@ export class AddContactDialog {
         let dialogRef = this.dialog.open(AddContactDialog, {
             data: {ContactName : this.ContactName, ContactPhone: this.ContactPhone } 
           });
-          dialogRef.afterClosed().subscribe(result => {
-           // if (result) {
+
+          /*dialogRef.afterClosed().subscribe(result => {
+            if (result) {
                 let cn = new contact({ ContactName: this.ContactName, ContactPhone: this.ContactPhone });
                 this.fs.addContact(cn).then(id=>{
                   let contact = this.as.addContact(id);
@@ -47,10 +48,10 @@ export class AddContactDialog {
                   console.log(this.ContactName); 
                   
                 })
-              //} 
+              } 
              // else{ console.log(this.ContactPhone);}
               
-            });
+            });*/
           this.dialog.closeAll();
           this.dialogRef.close();
     }

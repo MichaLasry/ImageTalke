@@ -1140,6 +1140,7 @@ export class HomeComponent implements OnInit {
   }
   ngOnInit() {
   }
+  
   add(): void {
     let dialogRef = this.dialog.open(AddContactDialog, {
       width: '380px',
@@ -1148,7 +1149,7 @@ export class HomeComponent implements OnInit {
       
     });
    // dialogRef.afterClosed
-    //dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe(result => {
 
       // console.log('The dialog was closed');
      /* if (result) {
@@ -1159,7 +1160,7 @@ export class HomeComponent implements OnInit {
         })
       }
       */
-/*
+
       if (result) {
         let cn = new contact({ ContactName: this.name, ContactPhone: this.phone });
         this.fs.addContact(cn).then(id=>{
@@ -1172,7 +1173,7 @@ export class HomeComponent implements OnInit {
       else{console.log("www"); 
     
     }
-    */
-    //});
+    
+    });
   }
 }
