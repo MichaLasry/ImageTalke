@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
   imagesArray = [];
   private _text: string[] = [];
   public imgSelect: any[] = [];
-  constructor(public router: Router,private fs : Firebase, private as: AuthService  ,public dialog: MatDialog,/*public addContactDailog:AddContactDialog*/ ) {
+  constructor(public router: Router,private fs : Firebase, private as: AuthService  ,public dialog: MatDialog) {
     this.verbs();
     //this.Cname=dialog.openDialogs;
   }
@@ -1021,6 +1021,42 @@ export class HomeComponent implements OnInit {
       {
         img: "https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%A4%D7%A2%D7%9C%D7%99%D7%9D%2F%D7%9C%D7%A9%D7%AA%D7%95%D7%AA.png?alt=media&token=ca5711a1-8968-46da-8619-d037708654b4",
         word: "to drink"
+      },
+      {
+        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%A4%D7%A2%D7%9C%D7%99%D7%9D%2Fdance.png?alt=media&token=b2cb6dd9-0f3e-4e35-97b9-82ce61c1eb95",
+        word:"to dance"
+      },
+      {
+        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%A4%D7%A2%D7%9C%D7%99%D7%9D%2Fear.jpg?alt=media&token=fbc7ffec-467a-4b6d-919f-40e33ee2dd53",
+        word:"to ear"
+      },
+      {
+        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%A4%D7%A2%D7%9C%D7%99%D7%9D%2FGo%20upstairs.PNG?alt=media&token=5ea25b73-2c61-4ab7-bce6-eb6231281220",
+        word:"go upstairs"
+      },
+      {
+        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%A4%D7%A2%D7%9C%D7%99%D7%9D%2FRide%20a%20bike.PNG?alt=media&token=1e366606-3137-4df6-91b7-89b1ab57da6f",
+        word:"ride a bike"
+      },
+      {
+        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%A4%D7%A2%D7%9C%D7%99%D7%9D%2FRide%20a%20horse.PNG?alt=media&token=90c0205c-580c-4125-bf53-2b20930b66b8",
+        word:"ride a horse"
+      },
+      {
+        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%A4%D7%A2%D7%9C%D7%99%D7%9D%2Fsee.png?alt=media&token=0dd6d962-982c-4e0f-9220-8e89efa84587",
+        word:"to see"
+      },
+      {
+        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%A4%D7%A2%D7%9C%D7%99%D7%9D%2Fthrow%20away.PNG?alt=media&token=5fbc5c6b-c79a-431d-9c18-24ce50fc2dbd",
+        word:"throw away"
+      },
+      {
+        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%A4%D7%A2%D7%9C%D7%99%D7%9D%2Fto%20take%20pictures.PNG?alt=media&token=446048c0-9498-420d-82e6-8f8b26549599",
+        word:"to take a pictures"
+      },
+      {
+        img:"https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%A4%D7%A2%D7%9C%D7%99%D7%9D%2Fwrite.jpg?alt=media&token=2fc7d943-4fd8-43ba-ab53-cc896bb1e332",
+        word:"to write"
       }
     ]
   }
@@ -1108,11 +1144,11 @@ export class HomeComponent implements OnInit {
     let dialogRef = this.dialog.open(AddContactDialog, {
       width: '380px',
       height: '450px',
-      data: { name: this.name, phone: this.phone, imgUrl: this.imgUrl }
+      data: { name:this.name, phone: this.phone, imgUrl: this.imgUrl }
       
     });
-    console.log(this.name);
-    dialogRef.afterClosed().subscribe(result => {
+   // dialogRef.afterClosed
+    //dialogRef.afterClosed().subscribe(result => {
 
       // console.log('The dialog was closed');
      /* if (result) {
@@ -1123,7 +1159,7 @@ export class HomeComponent implements OnInit {
         })
       }
       */
-
+/*
       if (result) {
         let cn = new contact({ ContactName: this.name, ContactPhone: this.phone });
         this.fs.addContact(cn).then(id=>{
@@ -1136,6 +1172,7 @@ export class HomeComponent implements OnInit {
       else{console.log("www"); 
     
     }
-    });
+    */
+    //});
   }
 }

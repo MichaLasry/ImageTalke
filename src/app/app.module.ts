@@ -20,6 +20,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth'
 import { Firebase } from './firebase.service';
 import { AuthService } from "./auth.service";
 import * as firebase from 'firebase';
+import { HttpModule } from '@angular/http';
 
 
 
@@ -61,7 +62,8 @@ export const environment = {
     MatIconModule,
     BrowserModule,
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    HttpModule
   ],
   providers: [
     Firebase,
