@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { AddContactDialog } from "../dialog/add-contact-dialog/add-contact-dialog.componet";
-import { user } from "../models/user.model"
+import { user } from '../models/user.model'
 import { Firebase } from '../firebase.service';
 import { AuthService } from '../auth.service';
 import { contact } from '../models/contact.model';
+
 
 @Component({
   selector: 'app-home',
@@ -15,14 +16,16 @@ import { contact } from '../models/contact.model';
 export class HomeComponent implements OnInit {
 
   name: string;
+  Cname: string;
   phone: string;
   imgUrl: string;
   imgs: any[];
   imagesArray = [];
   private _text: string[] = [];
   public imgSelect: any[] = [];
-  constructor(public router: Router,private fs : Firebase, private as: AuthService  ,public dialog: MatDialog) {
+  constructor(public router: Router,private fs : Firebase, private as: AuthService  ,public dialog: MatDialog,/*public addContactDailog:AddContactDialog*/ ) {
     this.verbs();
+    //this.Cname=dialog.openDialogs;
   }
 
   /* public put_up(imgs: any) {
@@ -1106,8 +1109,9 @@ export class HomeComponent implements OnInit {
       width: '380px',
       height: '450px',
       data: { name: this.name, phone: this.phone, imgUrl: this.imgUrl }
+      
     });
-
+    console.log(this.name);
     dialogRef.afterClosed().subscribe(result => {
 
       // console.log('The dialog was closed');
@@ -1125,9 +1129,13 @@ export class HomeComponent implements OnInit {
         this.fs.addContact(cn).then(id=>{
           let contact = this.as.addContact(id);
           this.fs.updateUser(contact);
+          console.log(this.name); 
         })
       } 
-      else{console.log("www"); }
+           
+      else{console.log("www"); 
+    
+    }
     });
   }
 }

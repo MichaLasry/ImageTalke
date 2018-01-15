@@ -5,6 +5,7 @@ import { Router } from "@angular/router";
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { AngularFireAuthModule } from 'angularfire2/auth'
+
 @Component({
     selector: "dialog-new-contact",
     templateUrl: "./add-contact-dialog.component.html",
@@ -29,13 +30,23 @@ export class AddContactDialog {
     }
     openDialog(){
         let dialogRef = this.dialog.open(AddContactDialog, {
-            width: '250px',
-            data: {ContactName : this.ContactName, ContactPhone: this.ContactPhone }
+            data: {ContactName : this.ContactName, ContactPhone: this.ContactPhone } 
           });
+         /* dialogRef.afterClosed().subscribe(result => {
+                  if (result) {
+                    let cn = new contact({ ContactName: this.name, ContactPhone: this.phone });
+                    this.fs.addContact(cn).then(id=>{
+                      let contact = this.as.addContact(id);
+                      this.fs.updateUser(contact);
+                      //console.log(cn.ContactName); 
+                    })
+                  } 
+                  */
+          console.log(this.ContactName);
           this.dialog.closeAll();
-          this.dialogRef.close();
+          //this.dialogRef.close();
     }
-    
+
     upload(e){
         console.log(e);
     }
