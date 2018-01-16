@@ -28,6 +28,7 @@ export class AuthService {
     })
 
   }
+  
 
   public addContact(id){
     this._user.contactId ? this._user.contactId.push(id) : this._user.contactId = [id];

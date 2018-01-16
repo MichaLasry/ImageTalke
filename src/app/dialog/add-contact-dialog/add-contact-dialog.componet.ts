@@ -9,6 +9,7 @@ import { user } from "../../models/user.model";
 import { contact } from "../../models/contact.model";
 import { Firebase } from '../../firebase.service';
 import { AuthService } from '../../auth.service';
+import { connect } from "net";
 
 
 @Component({
@@ -21,6 +22,7 @@ export class AddContactDialog {
     public ContactName:string;
     public ContactPhone:number;
     public ContactImg:ImageData;
+    public contactToSave=new contact();
     constructor(
        public dialogRef: MatDialogRef<AddContactDialog>,public dialog: MatDialog,
         @Inject(MAT_DIALOG_DATA) public data: any,public as:AuthService,public router:Router, private afs: AngularFirestore, public fs: Firebase) {
@@ -28,16 +30,41 @@ export class AddContactDialog {
             this.ContactPhone=null;
             this.ContactImg=null;
     }
+    
+    save(){        
+        /*let dialogRef = this.dialog.open(AddContactDialog, {
+            data: {ContactName : this.ContactName, ContactPhone: this.ContactPhone }
+          });*/
+         
+          console.log("78"); 
+this.fs.save({
+    
+    ContactName:this.contactToSave.CotactName,
+    ContactPhone: this.contactToSave.ContactPhone
+})
+this.contactToSave=new contact();
+this.dialog.closeAll();
+this.dialogRef.close();
+console.log(this.ContactName);
+
+    }
     onNoClick(): void {
-        this.dialogRef.close();        
+        this.dialogRef.close(); 
+               
     }
     submit(){
         this.dialogRef.close(this.data);
     }
     openDialog(){
         let dialogRef = this.dialog.open(AddContactDialog, {
-            data: {ContactName : this.ContactName, ContactPhone: this.ContactPhone } 
+            data: {ContactName : this.ContactName, ContactPhone: this.ContactPhone }
+            
           });
+          this.dialog.closeAll();
+          this.dialogRef.close();
+         // this.fs.updateContact({ContactName: this.ContactName, ContactPhone :this.ContactPhone})
+          
+    }        
 
           /*dialogRef.afterClosed().subscribe(result => {
             if (result) {
@@ -52,9 +79,7 @@ export class AddContactDialog {
              // else{ console.log(this.ContactPhone);}
               
             });*/
-          this.dialog.closeAll();
-          this.dialogRef.close();
-    }
+  
    
     upload(e){
         console.log(e);

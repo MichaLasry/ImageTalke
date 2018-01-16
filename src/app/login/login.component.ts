@@ -37,6 +37,8 @@ export class LoginComponent implements OnInit {
     {
       this.firebaseService.updateUser({username: this.UserName, phone :this.phone})
     }
+    let p = this.phone;
+    console.log(p);
     this.router.navigate(["home"])
   }
 

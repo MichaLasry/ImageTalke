@@ -58,6 +58,7 @@ export const environment = {
     BrowserAnimationsModule,
     MatDialogModule,
     MatButtonModule,
+    
     AngularFireModule.initializeApp(environment.firebase),
     MatIconModule,
     BrowserModule,

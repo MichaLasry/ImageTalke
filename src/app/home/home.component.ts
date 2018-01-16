@@ -6,6 +6,7 @@ import { user } from '../models/user.model'
 import { Firebase } from '../firebase.service';
 import { AuthService } from '../auth.service';
 import { contact } from '../models/contact.model';
+import { auth } from 'firebase';
 
 
 @Component({
@@ -44,7 +45,8 @@ export class HomeComponent implements OnInit {
     this.imgSelect.forEach(item => {
       str += " " + item["word"];
       this.imagesArray[0].push(item["img"]);
-
+      let p = this.fs.getPhone();
+      console.log(p);
     });
     this._text.push(str);
     this.imgSelect = [];
@@ -1138,9 +1140,19 @@ export class HomeComponent implements OnInit {
       }
     ]
   }
-  ngOnInit() {
-  }
   
+  ngOnInit() {
+  }/*
+  b()
+  { 
+     this.myAppointments=[]; 
+     for(var i=0,j=0;i<this.appointments.length;i++){
+       if(this.appointments[i].userName==this.auth.current_user.email){
+        this.myAppointments[j]=this.appointments[i];
+        j++;
+       }
+     }
+  }*/
   add(): void {
     let dialogRef = this.dialog.open(AddContactDialog, {
       width: '380px',
@@ -1148,8 +1160,9 @@ export class HomeComponent implements OnInit {
       data: { name:this.name, phone: this.phone, imgUrl: this.imgUrl }
       
     });
-   // dialogRef.afterClosed
-    dialogRef.afterClosed().subscribe(result => {
+    
+  
+   // dialogRef.afterClosed().subscribe(result => {
 
       // console.log('The dialog was closed');
      /* if (result) {
@@ -1160,7 +1173,7 @@ export class HomeComponent implements OnInit {
         })
       }
       */
-
+/*
       if (result) {
         let cn = new contact({ ContactName: this.name, ContactPhone: this.phone });
         this.fs.addContact(cn).then(id=>{
@@ -1173,7 +1186,7 @@ export class HomeComponent implements OnInit {
       else{console.log("www"); 
     
     }
-    
-    });
+    */
+    //});
   }
 }
