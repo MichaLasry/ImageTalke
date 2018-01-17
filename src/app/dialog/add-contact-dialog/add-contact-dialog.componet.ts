@@ -9,14 +9,13 @@ import { user } from "../../models/user.model";
 import { contact } from "../../models/contact.model";
 import { Firebase } from '../../firebase.service';
 import { AuthService } from '../../auth.service';
-import { connect } from "net";
 
 
 @Component({
     selector: "dialog-new-contact",
     templateUrl: "./add-contact-dialog.component.html",
     styleUrls: ["add-contact-dialog.component.scss"],
-    //providers: [contact]
+  
 })
 export class AddContactDialog {
     public ContactName:string;
@@ -31,11 +30,12 @@ export class AddContactDialog {
             this.ContactImg=null;
     }
     
-    save(){        
+   // save(){        
         /*let dialogRef = this.dialog.open(AddContactDialog, {
             data: {ContactName : this.ContactName, ContactPhone: this.ContactPhone }
           });*/
          
+/*
           console.log("78"); 
 this.fs.save({
     
@@ -48,6 +48,7 @@ this.dialogRef.close();
 console.log(this.ContactName);
 
     }
+    */
     onNoClick(): void {
         this.dialogRef.close(); 
                

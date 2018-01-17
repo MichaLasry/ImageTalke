@@ -9,6 +9,7 @@ import { contact } from '../models/contact.model';
 import { auth } from 'firebase';
 
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -24,7 +25,7 @@ export class HomeComponent implements OnInit {
   imagesArray = [];
   private _text: string[] = [];
   public imgSelect: any[] = [];
-  constructor(public router: Router,private fs : Firebase, private as: AuthService  ,public dialog: MatDialog) {
+  constructor(public router: Router,private addC: AddContactDialog ,private fs : Firebase, private as: AuthService  ,public dialog: MatDialog) {
     this.verbs();
     //this.Cname=dialog.openDialogs;
   }
@@ -45,8 +46,8 @@ export class HomeComponent implements OnInit {
     this.imgSelect.forEach(item => {
       str += " " + item["word"];
       this.imagesArray[0].push(item["img"]);
-      let p = this.fs.getPhone();
-      console.log(p);
+     /* let p = this.fs.getPhone();
+      console.log(p);*/
     });
     this._text.push(str);
     this.imgSelect = [];
@@ -1142,39 +1143,44 @@ export class HomeComponent implements OnInit {
   }
   
   ngOnInit() {
-  }/*
-  b()
-  { 
-     this.myAppointments=[]; 
-     for(var i=0,j=0;i<this.appointments.length;i++){
-       if(this.appointments[i].userName==this.auth.current_user.email){
-        this.myAppointments[j]=this.appointments[i];
-        j++;
-       }
-     }
-  }*/
+  }
+
+
   add(): void {
     let dialogRef = this.dialog.open(AddContactDialog, {
       width: '380px',
-      height: '450px',
-      data: { name:this.name, phone: this.phone, imgUrl: this.imgUrl }
-      
-    });
-    
-  
-   // dialogRef.afterClosed().subscribe(result => {
+      height: '550px',
+      data: { name: this.name, phone: this.phone }
+     });
+ 
+     dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+       if (result) {
+         let u =new user({UserName:this.addC.ContactName,phone:this.addC.ContactPhone});
+       this.fs.addContact(u).then(id=>{       
+          this.as.addContact(id);
+          this.fs.updateUser(user);
 
+        });
+       }
+     });
+   }
+  }
       // console.log('The dialog was closed');
-     /* if (result) {
-        let u = new user({ UserName: this.name, phone: this.phone });
+      /*if (result) {
+        let u = new user({ UserName:this.addC.ContactName, phone: this.addC.ContactPhone });
         this.fs.addContact(u).then(id=>{
           let user = this.as.addContact(id);
           this.fs.updateUser(user);
-        })
-      }
-      */
-/*
-      if (result) {
+          console.log(user.UserName);
+          
+        });
+        }*/
+      
+    
+  
+
+    /*  if (result) {
         let cn = new contact({ ContactName: this.name, ContactPhone: this.phone });
         this.fs.addContact(cn).then(id=>{
           let contact = this.as.addContact(id);
@@ -1187,6 +1193,3 @@ export class HomeComponent implements OnInit {
     
     }
     */
-    //});
-  }
-}

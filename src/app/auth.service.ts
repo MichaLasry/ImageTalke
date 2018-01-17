@@ -7,15 +7,12 @@ import { Component } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFirestoreDocument, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Router } from "@angular/router";
-
-
+//import { Firebase } from './firebase.service';
 
 @Injectable()
 export class AuthService {
   private _user;
-
   constructor(public afAuth: AngularFireAuth) { }
-
 
   loginWithGoogle() {
     return new Promise((res, rej) => {
@@ -29,7 +26,6 @@ export class AuthService {
 
   }
   
-
   public addContact(id){
     this._user.contactId ? this._user.contactId.push(id) : this._user.contactId = [id];
     return this._user;

@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 import { user } from './models/user.model';
 import { Router } from "@angular/router";
 import { CalendarEvent } from "angular-calendar";
-import { connect } from 'net';
 import { contact } from './models/contact.model';
 
 
@@ -27,25 +26,26 @@ export class Firebase {
   private contactsRef: AngularFirestoreCollection<contact>;
   private allconect:contact[];
 
-  constructor(public afAuth: AngularFireAuth, private afsDocument: AngularFirestore, public router: Router) {
+  constructor(public afAuth: AngularFireAuth,fss , private afsDocument: AngularFirestore, public router: Router) {
     this.contactsRef = this.afsDocument.collection("contacts");
-   this.contactsRef.valueChanges().subscribe(contact=>{
+   /*this.contactsRef.valueChanges().subscribe(contact=>{
      this.allconect=contact;
-   })
+   })*/
     firebase.auth().languageCode = "en";
   }
 
-
+/*
   public save(contact){
-this.contactsRef.add(contact).then(res=>{
-  console.log("77");
-  
-})
+    this.contactsRef.add(contact).then(res=>{
+      console.log("79");
+      
+    })
+
   }
 public get allContct(){
 return this.allconect ? this.allconect:[]
 }
-
+*/
 
 
   async login() {
@@ -69,20 +69,10 @@ return this.allconect ? this.allconect:[]
     this.userRef.set(user);
     // this.router.navigate(["home"]);
   }
-
-
-  
-  /*public updateContact(contact)//מעדכנת את הנתונים בשרת
-  {
-   // this.userRef.doc("users/").collection(this.contactsRef);
-    this.userRef.contactsRef= this.afsDocument.collection("contacts /" + contact.contactname + contact.contactphone);
-    this.userRef.set(user);
-    //db.collection("app").document("users").collection(uid).document("notifications")
-    // this.router.navigate(["home"]);
-  }*/
- /* public updateContact(contact){//מעדכנת את איש הקשר בשרת
-    this.contactsRef = this.afsDocument.collection("contacts/" + contact.contactname + contact.contactphone);
-    this.contactsRef.add("contacts/");
+  /*
+ public updateContact(contact){//מעדכנת את איש הקשר בשרת
+    this.contactsRef = this.afsDocument.collection("contacts/" + contact.contactname);
+    this.contactsRef.add(contact);
   }
   */
   logout() {

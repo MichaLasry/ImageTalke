@@ -6,10 +6,6 @@ import { Observable } from 'rxjs/Observable';
 import { Firebase } from '../firebase.service';
 import * as firebase from 'firebase/app';
 import { AuthService } from "../auth.service";
-
-
-
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -37,22 +33,10 @@ export class LoginComponent implements OnInit {
     {
       this.firebaseService.updateUser({username: this.UserName, phone :this.phone})
     }
-    let p = this.phone;
-    console.log(p);
+    /*let p = this.phone;
+    console.log(p);*/
     this.router.navigate(["home"])
   }
-
-  //Submit() {
-  //this.firebase.Submit(this.username,this.phone);
-
-  //}
-  /*
-    
- // ngAfterViewInit() {
-    // this.phoneRecaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
-  //}
-
-*/
   ngOnInit() {
   }
 
