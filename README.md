@@ -39,7 +39,7 @@ Please visit our wiki for furthur project info:
 - [Iteration 1 - MVP](https://github.com/MichaLasry/ImageTalke/wiki/Iteration-1-MVP)
 - [Iteration 2 - BFSC](https://github.com/MichaLasry/ImageTalke/wiki/Iteration-2--BFSC)
 - [Iteration 3 - Functionality](https://github.com/MichaLasry/ImageTalke/wiki/Iteration-3---Functionality)
-- [Iteration 4 - Feature Z]()
+- [Iteration 4 - Feature Z](https://github.com/MichaLasry/ImageTalke/wiki/iteration-4---firebase-&-customer-&-tests)
 
 
 
