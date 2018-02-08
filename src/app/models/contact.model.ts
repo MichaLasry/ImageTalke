@@ -1,13 +1,13 @@
 export class contact{
     
-        CotactName:string;
-        ContactPhone:number;
+        ContactName:string;
+        ContactPhone:string;
         ContactImg:ImageData;
 
-        constructor() {
-           /* this.CotactName=contact.CotactName;
+        constructor(contact) {
+          this.ContactName=contact.ContactName;
             this.ContactPhone=contact.ContactPhone;
             this.ContactImg=contact.ContactImg;
-            */
+           
         }   
 }

@@ -4,10 +4,12 @@
         <div class="box-header">
             <h2>Add contact</h2>
         </div>
-        <div class="form">
-            <input type="text" [(ngModel)]="contactToSave.ContactName" placeholder="Contact name" class="txt1" required>
             <br/>
-            <input type="text"  [(ngModel)]="contactToSave.ContactPhone" placeholder="Phone number" class="txt2" required>
+
+        <div class="form">
+            <input type="text" [(ngModel)]="ContactName" placeholder="Contact name" class="txt1" required>
+            <br/>
+            <input type="text"  [(ngModel)]="ContactPhone" placeholder="Phone number" class="txt2" required>
             <br/>
             <br/>
             <div input action="/action_page">
@@ -17,7 +19,7 @@
             <br/>
              <br/>
               <br/>
-            <button   id="Acontact-button">Add</button>
+            <button  (click)="openDialog()" id="Acontact-button">Add</button>
             </div>
         </div>
     <!--</div>-->

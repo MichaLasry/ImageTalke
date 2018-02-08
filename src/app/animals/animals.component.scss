@@ -1,5 +1,5 @@
 /*----- Genral Classes start ------*/
-.footer {
+.footer{
 	//background: #FCE8E8;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 100%;
@@ -10,16 +10,27 @@
     height:48.6%;
     top:52.3%;
     left: 26.5%;
+	overflow: scroll;
+    //-webkit-box-orient: vertical;
+    //-webkit-box-direction: normal;
+	//overflow-x: scroll;	
+}
+
+.footer::-webkit-scrollbar
+{
+ width: 5px;
+  height: 8px;
 }
 
 .wrapper,.copyright {
 	padding: 20px;
 	text-align: center;
+
 }
 hr{
 	margin: 30px 20px;
-	border-top:2px solid #1C1E26 ;
-	border-bottom:2px solid #38404D;
+	//border-top:1px solid #1C1E26 ;
+	//border-bottom:1px solid #38404D;
 }
 .list-unstyled {
 	padding-left: 0;
@@ -36,20 +47,21 @@ hr{
 .img{
 	width: 9%;
 	height: 14.5%;
-	line-height: 50px;
+	line-height: 11px;
 	text-align: center;
-	color: #8F0909;
+	color: #DD6D05;
 	padding: 1.2%;
 	margin: 0.4%;
-	color: black(250, 250, 250, 0.51);
+	//color: black(250, 250, 250, 0.51);
     -webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
-	border : 8px solid #8F0909;
+	//border : 1px solid #8F0909;
     border-radius: 20%;
 	border:solid;
+	box-shadow: 0 5px 30px rgba(0,0,0,0.4);
 }
 
 .social-icons.icon-circle .fa{ 

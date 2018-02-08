@@ -2,8 +2,19 @@
     //background-color:#Fff; 
     width:100vw;
     height: 100vh;
-    background: linear-gradient(to right ,rgb(114, 1, 1), rgb(245, 241, 241),rgb(245, 241, 241),rgb(201, 136, 136));
+  //background: linear-gradient(to right ,rgba(231, 226, 226, 0.836), rgb(255, 255, 255),rgb(255, 255, 255),rgba(231, 226, 226, 0.836));
+    //background: linear-gradient(to right ,rgb(112, 255, 131), rgb(255, 255, 255),rgb(255, 255, 255),rgb(112, 255, 131));
+    background: linear-gradient(to right ,rgba(145, 139, 139, 0.836), rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgba(145, 139, 139, 0.836));
     
+    }
+  .temp{
+        position: absolute;
+        top:5%;
+        left: 0%;
+        width:100%;
+        height: 80%;
+        opacity: 0.5;
+
     }
     .boy{
         top: 70%;
@@ -50,7 +61,7 @@
             //overflow-x: hidden;
     }
     .Letters{
-            font-family:Axure Handwriting;
+        font-family: 'Miltonian Tattoo', cursive;        
             font-size: 135%;
             width: 50vw;
             top: 0%;
@@ -67,13 +78,25 @@
         position: absolute;
         top:89%;
         left:4%;
-        border :4px solid #8F0909;
+        border :2px solid #DD6D05;
         border-radius: 5px;
         display: flex;
         overflow: scroll;
         //overflow-x: hidden;
     }
- 
+     .put_contact{
+        position: absolute;
+        top:18%;
+        left:3%;
+        width: 85%;
+        height: 70%;
+        padding:5%;//////5
+        margin: 1.5%;
+        display: flex;
+        flex-flow:row wrap;       
+        overflow: scroll;
+
+}
     
     .read{
       position: absolute;
@@ -81,9 +104,16 @@
         left: 82%;
         width:7.5%; 
         height: 19.5%;
-        border : 4px solid #8F0909;
+        border : 2px solid #DD6D05;
         border-radius: 5px;
         //background-color: #Fff;
+    }
+    #r{
+        position: absolute;
+        width:82%; 
+        height: 82%; 
+        top:10%;
+        left: 10%;
     }
  
 ::-webkit-scrollbar {width: 0.1px; height: 0.1px; }
@@ -107,7 +137,7 @@
         left:91%;
         width:7%; 
         height: 19.5%;
-        border : 4px solid #8F0909;
+        border : 2px solid #DD6D05;
         border-radius: 5px; 
         //background-color: #fff;
             &:hover{
@@ -130,7 +160,7 @@
         position:absolute;
         top:4.5%;
         right: 2%;
-        border : 4px solid #8F0909;
+        border : 2px solid #DD6D05;
         border-radius: 5px; 
     }
     
@@ -160,7 +190,7 @@
         position:absolute;
         top:1%;
         left:.5%;
-        border : 4px solid #8F0909;
+        border : 2px solid #DD6D05;
         border-radius: 5px; 
         display: flex;
         overflow: scroll;
@@ -170,7 +200,8 @@
         position: absolute;
         top: -1.5%;
         left: 4.5%;
-        color: #8F0909;
+        color: #DD6D05;
+        font-size: 3vw;
         //font-weight: bold;
     }
     
@@ -181,7 +212,7 @@
         position:absolute;
         top:2.5%;
         right:2%;
-        border : 4px solid #8F0909;
+        border : 2px solid #DD6D05;
         border-radius: 5px; 
         background-color: transparent;
         border-radius: 13%; 
@@ -207,7 +238,7 @@
         position:absolute;
         top:20%;
         left:28%;
-        border : 4px solid #8F0909;
+        border : 2px solid #DD6D05;
         border-radius: 13%; 
         
         //background-color: #FFF;
@@ -228,7 +259,7 @@
         position:absolute;
         top:50.5%;
         left:.5%;
-        border : 4px solid #8F0909;
+        border : 2px solid #DD6D05;
         border-radius: 5px; 
         display: flex;
         overflow: scroll;
@@ -237,7 +268,8 @@
     }
     .h1{
         padding: 2%;	
-        font-family:Axure Handwriting;
+        font-family: 'Miltonian Tattoo', cursive;
+        
     }
     
     .wrapper,.copyright {
@@ -253,19 +285,19 @@
     
     hr{
         margin: 30px 20px;
-        border-top:4px solid #1C1E26 ;
+        border-top:2px solid #1C1E26 ;
         border-bottom:2px solid #38404D;
     }
     /*Change circle size and color here*/
     .img{
         width: 13%;
         height: 8%;
-        line-height: 50px;
+        line-height: 5px;
         text-align: center;
-        color: #8F0909;
+        color: #DD6D05;
         padding:5%;//////5
         margin: 1.5%;
-        color: black(250, 250, 250, 0.51);
+        color: black(2, 250, 250, 0.51);
         -webkit-transition: all 0.3s ease-in-out;
         -moz-transition: all 0.3s ease-in-out;
         -ms-transition: all 0.3s ease-in-out;
@@ -273,7 +305,8 @@
         transition: all 0.3s ease-in-out;
         border-radius: 20%;
         border:solid;
-        background-color: white;
+        box-shadow: 0 5px 35px rgba(0,0,0,0.4);       
+       // background-color: white;
         &:hover{
          opacity:0.5;
          cursor: pointer;
@@ -316,6 +349,7 @@
         left:91.6%;
         width:7%; 
         height: 7%;
+
         //z-index:-1;
        
     }
@@ -329,6 +363,3 @@
     overflow: scroll;
      
     }
-    
-    
-    

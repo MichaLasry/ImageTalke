@@ -1,7 +1,7 @@
 export class user{
     
         UserName:string;
-        phone:number;
+        phone:string;
         firstLogin: boolean = false;
         contactId:any[];
 

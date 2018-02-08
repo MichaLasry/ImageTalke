@@ -7,27 +7,105 @@ import { Component } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFirestoreDocument, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Router } from "@angular/router";
-//import { Firebase } from './firebase.service';
+import { user } from './models/user.model';
+import { LoginComponent } from './login/login.component';
+import * as logc from './login/login.component';
+import { Firebase } from './firebase.service';
+
 
 @Injectable()
 export class AuthService {
-  private _user;
-  constructor(public afAuth: AngularFireAuth) { }
+  private _user:any;
+  private userdoc: AngularFirestoreDocument<user>;
+  public Uname;
+  private Uphone;
+  public contact:any[];
+  
+  constructor(public afAuth: AngularFireAuth,  private afs: AngularFirestore) {
 
-  loginWithGoogle() {
+   this._user = new user({});
+   
+   }
+
+   public User(user){
+    this._user.phone=user.phone;
+    this._user.UserName=user.UserName;
+    return this._user; 
+  }
+  public keepUser(user)//מעדכנת את הנתונים בשרת
+  {
+    let temp =JSON.parse(JSON.stringify(user));
+    console.log(temp);
+    this.Uname=temp.username;
+    this.Uphone=temp.phone;
+    console.log(this.Uname);
     return new Promise((res, rej) => {
       this.afAuth.auth.signInWithPopup(
-        new firebase.auth.GoogleAuthProvider()).then(user => {
-          console.log(user);
-          this._user = user.user;
+        new firebase.auth.GoogleAuthProvider()).then(user => { 
+          this.afs.doc("users/" + this.Uname).valueChanges().subscribe(u => {
+            this._user = u;
+            console.log(this._user);
+          });
+          this._user.UserName=this.Uname;
+          this._user.phone=this.Uphone;
+          console.log(this._user);
+        //this._user.UserName=this.user.UserName;
+        
           res(this._user);
+          console.log();
         });
-    })
-
+    });
+    
+   //return temp.UserName;
   }
   
+  loginWithGoogle() {
+    /*
+    return new Promise((res, rej) => {
+      this.afAuth.auth.signInWithPopup(
+        new firebase.auth.GoogleAuthProvider()).then(user => { 
+          this._user.UserName=this.Uname;
+          console.log(this._user.UserName);
+        this._user.UserName=this.user.UserName;
+          res(this._user);
+          console.log();
+        });
+    })
+*/
+  }
+ /* gtttt()
+  {
+    this.userdoc=this.afs.doc("users/"+ ){
+      this.userdoc.valueChanges().subscribe(res=>{
+  let u=res.UserName;
+  this.authService.getu(u);
+      });
+    }
+  }
+*/
+  public setu(u){
+    return u;
+  }
+  public getu()
+  {
+    return 
+  }
+   
+public getContacts(){
+this.userdoc
+  return;
+}
+
+  public get user(){
+    return this._user;
+  }
+  
+
   public addContact(id){
+    //id=this.user.UserName;
+    console.log(this._user);
     this._user.contactId ? this._user.contactId.push(id) : this._user.contactId = [id];
+    console.log(this._user.contactId);
     return this._user;
   }
   public loginWIthEmail(email: string, password: string) {
@@ -52,3 +130,5 @@ export class AuthService {
     this.afAuth.auth.signOut();
   }
 }
+
+

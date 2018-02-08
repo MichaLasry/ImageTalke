@@ -8,7 +8,8 @@ import { user } from './models/user.model';
 import { Router } from "@angular/router";
 import { CalendarEvent } from "angular-calendar";
 import { contact } from './models/contact.model';
-
+import { auth } from 'firebase';
+import { AuthService } from "./auth.service";
 
 
 @Injectable()
@@ -22,36 +23,43 @@ export class Firebase {
   private image: ImageData;
   private contactl: string;
   public userRef;
+  public userTempRef:AngularFirestoreCollection<user>;
+  recipeTempObservable: Observable<user>;
   private _email: string;
   private contactsRef: AngularFirestoreCollection<contact>;
   private allconect:contact[];
+  private userdoc: AngularFirestoreDocument<user>;
+  private contactRef: AngularFirestoreCollection<contact>;
 
-  constructor(public afAuth: AngularFireAuth,fss , private afsDocument: AngularFirestore, public router: Router) {
+  
+  public c = new contact({});   
+  
+
+  
+  constructor(public afAuth: AngularFireAuth,public as:AuthService, private afsDocument: AngularFirestore, public router: Router) {
+//   this.afsDocument.doc("users/").collection("contacts");
+   //this.contactRef = this.afsDocument.collection("contact");
     this.contactsRef = this.afsDocument.collection("contacts");
-   /*this.contactsRef.valueChanges().subscribe(contact=>{
-     this.allconect=contact;
-   })*/
     firebase.auth().languageCode = "en";
   }
 
-/*
-  public save(contact){
-    this.contactsRef.add(contact).then(res=>{
-      console.log("79");
-      
+  /*public t() {
+    this.c.ContactName="shira";
+    this.c.ContactPhone=111;
+    return new Promise((res, rej) => {
+      let temp =JSON.parse(JSON.stringify(c));
+      this.contactRef.add(temp).then(c => {
+        console.log(contact.name);
+        res(c.id);
+      })
+
     })
-
   }
-public get allContct(){
-return this.allconect ? this.allconect:[]
-}
 */
-
 
   async login() {
     let u = await this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
     console.log(u);
-    //return this.getUserData(u.user.email);
   }
 
   private getUserData(username: string) { //פעם אחת נקרא לפונקציה היא מאזינה לכל הנתונים של המשתמש
@@ -61,20 +69,30 @@ return this.allconect ? this.allconect:[]
         res(this._profile);
       });
     });
-
   }
   public updateUser(user)//מעדכנת את הנתונים בשרת
   {
-    this.userRef = this.afsDocument.doc("users/" + user.username);
-    this.userRef.set(user);
-    // this.router.navigate(["home"]);
+    let temp =JSON.parse(JSON.stringify(user));
+    this.userRef = this.afsDocument.doc("users/" + user.UserName);
+    this.userRef.set(temp);
+    console.log(user);
   }
-  /*
- public updateContact(contact){//מעדכנת את איש הקשר בשרת
-    this.contactsRef = this.afsDocument.collection("contacts/" + contact.contactname);
-    this.contactsRef.add(contact);
+  public getusernsme(user){
+    return user.username;
   }
-  */
+/*public get userphone(user){
+    return user.phone;
+  }*/
+  /*public getUserName(){
+    this.afsDocument.doc("users/").valueChanges().subscribe(res=>{
+    
+      console.log(this.username);
+      //this.phone=res.phone;
+    })
+   }
+  
+*/
+
   logout() {
     this.afAuth.auth.signOut();
   }
@@ -86,17 +104,18 @@ return this.allconect ? this.allconect:[]
       this._email = "";
     return this._email;
   }
-  updateProfile(obj) {
+  /*updateProfile(obj) {
     this._profile = obj;
     this.update();
-  }
+  }*/
 
   private update() {
     if (this.getUserName().length > 0)
       this.afsDocument.doc("users/" + this.username).set(this._profile).then(res => {
       });
   }
-  public getUserName() {
+
+public getUserName() {
 
     if (this.afAuth.auth.currentUser)
       this.username = this.afAuth.auth.currentUser.displayName;
@@ -114,9 +133,12 @@ return this.allconect ? this.allconect:[]
 
   }
   
+  
   public addContact(contact) {
     return new Promise((res, rej) => {
-      this.contactsRef.add(contact).then(c => {
+      let temp =JSON.parse(JSON.stringify(contact));      
+      this.contactsRef.add(temp).then(c => {
+        console.log(temp.ContactName);
         res(c.id);
       })
 

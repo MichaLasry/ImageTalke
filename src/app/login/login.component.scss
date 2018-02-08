@@ -3,12 +3,15 @@ body {
 	font-size: 16px;
 }
 h2 {
-	font-family:Axure Handwriting;
+
+
+font-family: 'Chewy', cursive;
+//font-family: 'Rock Salt', cursive;
 	text-transform: uppercase;
 	color: white;
 	font-weight: 400;
 	letter-spacing: 1px;
-	font-size: 2.8em;
+	font-size: 2.9em;
 	line-height: 2.8em;
 	text-shadow: 0 0 10px rgba(0,0,0,0.8);
 }
@@ -39,7 +42,7 @@ h2 {
 	text-align: center;
 }
 .login-box .box-header {
-	background-color: #8F0909;
+	background-color:#DD6D05;
 	margin-top: 0;
 	border-radius: 15px 15px 0 0;
 }
@@ -53,12 +56,14 @@ h2 {
 	border-radius: 2px;
 	font-size: .9em;
 	color: #888;
+	border-radius: 7px;
 }
 .login-box input:focus {
 	outline: none;
 	border-color: #665851;
 	transition: 0.5s;
 	color: #4E006A;
+	border-radius: 7px;
 }
 
 .login-box button {
@@ -71,7 +76,7 @@ h2 {
 	font-weight: 400;
 	font-size: 0.9em;
 	letter-spacing: 1px;
-	background-color:#8F0909;
+	background-color:#DD6D05;
 	cursor:pointer;
 	outline: none;
 	font-family:SWItalt;
