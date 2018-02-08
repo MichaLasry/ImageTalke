@@ -44,15 +44,13 @@ export class AuthService {
         new firebase.auth.GoogleAuthProvider()).then(user => { 
           this.afs.doc("users/" + this.Uname).valueChanges().subscribe(u => {
             this._user = u;
-            console.log(this._user);
+            console.log (this._user);
           });
           this._user.UserName=this.Uname;
           this._user.phone=this.Uphone;
-          console.log(this._user);
-        //this._user.UserName=this.user.UserName;
         
           res(this._user);
-          console.log();
+          console.log(res);
         });
     });
     

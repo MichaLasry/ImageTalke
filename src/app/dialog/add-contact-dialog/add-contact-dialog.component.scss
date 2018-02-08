@@ -160,14 +160,14 @@
 	  color:#DD6D05;
 	  font-weight: 400;
 	  letter-spacing: 1px;
-	  font-size: 4vw;
+	  font-size: 3.5vw;
 	  line-height: 3em;
 	  text-shadow: 0 0 10px rgba(0,0,0,0.8);
 	  text-align: center; 
 	  font-weight:bolder;
 	  margin-top:-2;
 	  position: absolute;
-	  left: 35%;
+	  left: 37%;
   }  
   /*.form{
   position:absolute;
@@ -192,12 +192,12 @@
 	}
   
   .b_add{
-  width:55%; 
-  height: 25%;
-  font-size: 180%;
-  //text-align: center; 
-  display: block; 
-  margin-left: auto;
+   width:55%; 
+   height: 25%;
+   font-size: 180%;
+   //text-align: center; 
+   display: block; 
+   margin-left: auto;
    margin-right: auto;
    background-color: white;
    border:dashed;
@@ -215,6 +215,7 @@
   }
   
   .txt1{
+	  &:focus {outline:0;};
 	  text-align: center;
 	  display: flow-root; 
 	  margin-left: auto;
@@ -226,6 +227,7 @@
   }
   
   .txt2{
+	  &:focus {outline:0;}
 	  text-align: center;
 	  display: flow-root; 
 	  font-size: 80%;
@@ -236,25 +238,24 @@
 	  border-radius: 5px;
 	  width: 60%;
 	  height:6.5%;
-  
   }
   
   #Acontact-button{
-	   margin-top: -60px;
-	  border: 0;
-	  border-radius: 4px;
-	  color: white;
-	  padding: 10px;
-	  text-transform: uppercase;
-	  font-weight: 400;
-	  font-size:1em;
-	  letter-spacing: 1px;
-	  background-color:#DD6D05;
-	  cursor:pointer;
-	  outline: none;
-	  font-family:Axure Handwriting;
-	  text-align: center;
-	   margin-left: auto;
-	   margin-right: auto;
-		display: block;
+	margin-top: -60px;
+	border: 0;
+	border-radius: 4px;
+	color: white;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size:1em;
+	letter-spacing: 1px;
+	background-color:#DD6D05;
+	cursor:pointer;
+	outline: none;
+	font-family:Axure Handwriting;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
   }

@@ -37,7 +37,7 @@
                  
              <!-- </a> -->
         <!--    <button class="change">change contact</button>-->
-        <!--<div class="contact"></div>-->
+        <div class="contact" ><div id="contact"></div></div>
         <!-- <img class="logo" src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/logo.JPG?alt=media&token=f7ef3990-0866-4ca0-95a0-d6cebc9eb6a8">-->
     </div>
 
@@ -50,13 +50,11 @@
         <div class="put_contact" *ngIf="allContacts">
 
             <div class="img" *ngFor="let c of allContacts" (click)="currContact = c">
-                <div>{{c.ContactName}}</div>
-                <div>{{c.ContactPhone}}</div>
+                <div class="contact_name" (click)="put_the_name(c.ContactName)">{{c.ContactName}}</div>
             </div>
             
 
         </div>
-
     </div>
 
 
@@ -80,18 +78,14 @@
             <img class="img" (click)="verbs()" src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%A4%D7%A2%D7%9C%D7%99%D7%9D%2F%D7%91%D7%91%D7%A7%D7%A9%D7%94.svg?alt=media&token=063ea787-812b-4ca7-b875-0c2a3cb856ac">
             <img class="img" (click)="attributes()" src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%9D%2F%D7%99%D7%9E%D7%99%D7%A0%D7%94.png?alt=media&token=3530c4cc-70e3-4d9f-8023-1a6145c57ddc">
             <img class="img" (click)="Stationery()" src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9E%D7%9B%D7%A9%D7%99%D7%A8%D7%99%20%D7%9B%D7%AA%D7%99%D7%91%D7%94%2FStationery.png?alt=media&token=f4cb827e-cfb4-4e09-9cf1-48aa7c6ab778">
-            <!--צריך להוסיף את הדף של הקטגוריה ת
-                 <img class="img" (click)=fruits() src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/Fruits%2F%D7%A7%D7%98%D7%92-%D7%A4%D7%A8%D7%95%D7%AA.png?alt=media&token=24c69beb-2bd1-4fc1-ad64-9d2e3b4bd064">
-               <!--צריך לשנות את התמונות לתמונות של הקטגוריות
-                 <img class="img" (click)=housewares() src="https://image.flaticon.com/icons/svg/136/136362.svg">-->
+
         </div>
-        <!--  <button class="add_cat">add category</button>-->
     </div>
     <div>
         <div>
-            <app-animals [_imgs]="imgs" (imgClick)="addToText($event)">
-            </app-animals>
+            <app-categories [_imgs]="imgs" (imgClick)="addToText($event)">
+            </app-categories>
         </div>
     </div>
-    <img class="footer" src="gs://imagetalk-76424.appspot.com/imagetalk.png">
+    <img class="footer" src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9C%D7%95%D7%92%D7%95.png?alt=media&token=549b55ef-4d5b-4221-903d-2e4ed642ffde">
 </div>

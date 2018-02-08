@@ -29,21 +29,34 @@ export class LoginComponent implements OnInit {
       this.firebaseService.updateUser({username: this.UserName, phone :this.phone})
       await this.authService.keepUser({username: this.UserName, phone :this.phone})
     }
-    this.getUserById;
+    else{
+   if(this.UserName==""||this.phone=="")
+      {
+       document.getElementById("UserName")
+       document.getElementById("phone")
+       if(this.UserName=="")
+        {
+           document.getElementById(this.UserName).style.display='block';
+        }
+       else{
+           document.getElementById(this.UserName).style.display='none';
+
+          }
+       if(this.phone=="")
+        {
+          document.getElementById("phone").style.display='block';
+        }
+         else{
+           document.getElementById("UserName").style.display='none';
+
+          }
+       }
+      }
     this.router.navigate(["home"])
-  }
-  getUserById(){
-    this.firebaseService.userRef=this.firebaseService.userTempRef.doc(this.UserName);
-  this.firebaseService.recipeTempObservable= this.firebaseService.userRef.valueChanges();
-    this.firebaseService.recipeTempObservable.subscribe(res=>{
-      console.log(res);
-      this.UserName=res.UserName;
-      //this.phone=res.phone;
-    })  
   }
  
  getuserName(){
-    return this.getUserById.name;
+    //return this.getUserById.name;
   }
   ngOnInit() {
   }
