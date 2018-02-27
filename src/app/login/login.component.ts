@@ -50,6 +50,7 @@ export class LoginComponent implements OnInit {
        document.getElementById("phone")
        if(this.UserName=="")
         {
+<<<<<<< HEAD
           console.log("ttt");
            document.getElementById("username").style.display='block';
         }
@@ -58,15 +59,32 @@ export class LoginComponent implements OnInit {
 
           }
        if(this.phone==null)
+=======
+           document.getElementById(this.UserName).style.display='block';
+        }
+       else{
+           document.getElementById(this.UserName).style.display='none';
+
+          }
+       if(this.phone=="")
+>>>>>>> 0df9b7d3e6bc9f5eb6615385e3810647ae66d188
         {
           document.getElementById("phone").style.display='block';
         }
          else{
+<<<<<<< HEAD
            document.getElementById("phone").style.display='none';
 
           }
        }
             }
+=======
+           document.getElementById("UserName").style.display='none';
+
+          }
+       }
+      }
+>>>>>>> 0df9b7d3e6bc9f5eb6615385e3810647ae66d188
     this.router.navigate(["home"])
   }
  
