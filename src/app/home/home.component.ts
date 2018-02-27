@@ -10,28 +10,6 @@ import { contact } from '../models/contact.model';
 import { auth } from 'firebase';
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from 'angularfire2/firestore';
 
-
-
-
-import { Observable } from 'rxjs/Observable'; 
-import { CalendarEvent } from 'calendar-utils';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import 'rxjs/add/operator/switchmap'
-import 'rxjs/add/observable/combineLatest';
-import * as firebase from 'firebase';
-import { ArrayObservable } from 'rxjs/observable/ArrayObservable';
-import { app } from 'firebase/app';
-import { Data } from '@angular/router/src/config';
-
-
-
-export interface user{
- UserName:string;
- phone:string;
- firstLogin: boolean;
- contactId:any[];
- }
-
 @Component({
  selector: 'app-home',
  templateUrl: './home.component.html',
@@ -45,7 +23,7 @@ export class HomeComponent implements OnInit {
  imgUrl: string;
  imgs: any[];
  imagesArray = [];
- private _text: string[] = [];
+ public _text: string[] = [];
  public imgSelect: any[] = [];
  public userRef;
  public user_data: user[];
@@ -94,13 +72,12 @@ for(let i =0,j=0;i<this.u.length;i++){
  }
  
  
+put_the_name(cname){
+var element = document.getElementById("contact");
+element.innerHTML = cname;
+//element.valueChanges(cname);
 
-
- /* public put_up(imgs: any) {
- this.imgSelect.push(imgs);
- }*/
-
-
+}
  public addToText(img: string) {
     this.imgSelect.push(img);
  }
@@ -111,13 +88,10 @@ for(let i =0,j=0;i<this.u.length;i++){
 
  public generateText() {
     let str = "";
-    // my_img=this.imgSelect;
     this.imagesArray.unshift([]);
     this.imgSelect.forEach(item => {
     str += " " + item["word"];
     this.imagesArray[0].push(item["img"]);
-    ///let p = this.fs.getuserphone;
-    //console.log(p);
     });
     this._text.push(str);
     this.imgSelect = [];
@@ -146,12 +120,6 @@ for(let i =0,j=0;i<this.u.length;i++){
  var msg = new SpeechSynthesisUtterance(str);
  window.speechSynthesis.speak(msg);
  }
-
- /*
- get picArr() {
- return this.imgSelect;
- }
- */
 
  contacts(): void {
  this.router.navigate(["contacts"]);
@@ -1217,22 +1185,19 @@ for(let i =0,j=0;i<this.u.length;i++){
  }
  add(): void {
  let dialogRef = this.dialog.open(AddContactDialog, {
- width: '380px',
- height: '430px',
+ width: '370px',
+ height: '470px',
  data: { name: this.name, phone: this.phone }
  });
  
  dialogRef.afterClosed().subscribe(result => {
  console.log('The dialog was closed');
  if (result) {
- console.log(result);
  let u = new contact({ ContactName: result.name, ContactPhone: result.phone });
- console.log(u.ContactName);
  this.fs.addContact(u).then(id=>{
  let contact = this.as.addContact(u);
  this.fs.updateUser(contact);
  })
- 
  }
  });
  }

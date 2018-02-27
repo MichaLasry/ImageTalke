@@ -73,7 +73,7 @@ export class Firebase {
   public updateUser(user)//מעדכנת את הנתונים בשרת
   {
     let temp =JSON.parse(JSON.stringify(user));
-    this.userRef = this.afsDocument.doc("users/" + user.UserName);
+    this.userRef = this.afsDocument.doc("users/" + user.username);
     this.userRef.set(temp);
     console.log(user);
   }

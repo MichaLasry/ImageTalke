@@ -1,1 +1,6 @@
-{}
+{
+  "projects": {
+    "imagetalk": "imagetalk-76424",
+    "default": "imagetalk-76424"
+  }
+}

@@ -9,19 +9,20 @@
 			</div>
 			<form class="form" action="/action_page">
 	
-			<input type="text" [(ngModel)]="UserName" onsubmit="myFunction()" name="UserName"  pattern="[A-Za-z]{}" placeholder="UserName">
-			<div id="UserName" style="color:transparent; display:none">
+			<input type="text" [(ngModel)]="UserName" onsubmit="myFunction()" name="UserName"  pattern="[A-Za-z]{}" placeholder="UserName"  >
+          <div id="city" style="color:red; display:none">
 			  The user name is required.
 			</div>
 		  
 			<input type="text" [(ngModel)]="phone" name="phone" placeholder="Phone number">
-			<div id="PelephoneNumber" style="color:transparent; display:none">
+          <div id="city" style="color:red; display:none">
 				The phone is required.
 			  </div>
 			<button (click)=loginWithGoogle() type="Submit"  class="Submit" id="login-button">Login</button>
 	
 		</form>
 		</div>
+	  <img class="footer" src="https://firebasestorage.googleapis.com/v0/b/imagetalk-76424.appspot.com/o/%D7%9C%D7%95%D7%92%D7%95.png?alt=media&token=549b55ef-4d5b-4221-903d-2e4ed642ffde">
 	</div>
 	
 	<!--<script>

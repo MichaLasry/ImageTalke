@@ -1,15 +1,13 @@
 .body{
-    //background-color:#Fff; 
+   
     width:100vw;
     height: 100vh;
-  //background: linear-gradient(to right ,rgba(231, 226, 226, 0.836), rgb(255, 255, 255),rgb(255, 255, 255),rgba(231, 226, 226, 0.836));
-    //background: linear-gradient(to right ,rgb(112, 255, 131), rgb(255, 255, 255),rgb(255, 255, 255),rgb(112, 255, 131));
-    background: linear-gradient(to right ,rgba(145, 139, 139, 0.836), rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgba(145, 139, 139, 0.836));
+    background: linear-gradient(to right ,rgba(201, 195, 195, 0.836),rgba(235, 229, 229, 0.836),rgb(255, 255, 255),rgba(235, 229, 229, 0.836),rgba(173, 170, 170, 0.836));
     
     }
   .temp{
         position: absolute;
-        top:5%;
+        top:10%;
         left: 0%;
         width:100%;
         height: 80%;
@@ -42,7 +40,7 @@
     
     .main{
     width:73%;
-    height: 45%;
+     height: 45%;
     position: absolute;
     top:0%;
     right:0%;
@@ -53,12 +51,10 @@
             top:3%;
             height: 85%;
             width: 80%;
-            //background-color: gray;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;   
             overflow: scroll;
-            //overflow-x: hidden;
     }
     .Letters{
         font-family: 'Miltonian Tattoo', cursive;        
@@ -72,6 +68,7 @@
     }
  
     .massage{
+         &:focus {outline:0;}
         width: 78.5%;
         height: 19.75%;
       //  background-color: #FFF;
@@ -88,13 +85,15 @@
         position: absolute;
         top:18%;
         left:3%;
-        width: 85%;
-        height: 70%;
+        width: 95%;
+        height: 80%;
         padding:5%;//////5
+        text-align: center;
         margin: 1.5%;
         display: flex;
         flex-flow:row wrap;       
         overflow: scroll;
+        text-align: center;
 
 }
     
@@ -153,16 +152,26 @@
         width:80%; 
         height: 80%;
     }
-    
+
+    #contact{
+     color: #DD6D05;
+     margin-left: 5%;
+    margin-top:30%;
+     text-align: center;
+     font-size: 140%;
+    }
     .contact{//the place that the picture of the contact
-        width: 10.5vw;
-        height:18vh ;
+        width: 7vw;
+        height:9vh ;
         position:absolute;
         top:4.5%;
+        right: 40;
         right: 2%;
-        border : 2px solid #DD6D05;
-        border-radius: 5px; 
+        border : 3px solid #DD6D05;
+        border-radius: 100px; 
+   
     }
+  
     
     /*.change{
         width: 11.2vw;
@@ -206,7 +215,7 @@
     }
     
     .contact1{
-
+        &:focus {outline:0;}
         width: 22%;
         height:20% ;
         position:absolute;
@@ -220,6 +229,7 @@
     }
     
     .add_contact{
+        &:focus {outline:0;};
         width: 98%;
         height:88% ;
         position: absolute;;
@@ -290,6 +300,7 @@
     }
     /*Change circle size and color here*/
     .img{
+         &:focus {outline:0;}
         width: 13%;
         height: 8%;
         line-height: 5px;
@@ -305,6 +316,7 @@
         transition: all 0.3s ease-in-out;
         border-radius: 20%;
         border:solid;
+        text-align: center;
         box-shadow: 0 5px 35px rgba(0,0,0,0.4);       
        // background-color: white;
         &:hover{
@@ -345,21 +357,20 @@
     }*/
     .footer{
         position: absolute;
-        top:89%;
+        top:92%;
         left:91.6%;
         width:7%; 
         height: 7%;
-
         //z-index:-1;
        
     }
     
     
     
-    .images{
+    /*/.images{
       display: flex;
       flex-direction: row;
       height: 15%;
     overflow: scroll;
      
-    }
+    }*/

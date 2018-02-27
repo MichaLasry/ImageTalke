@@ -2,7 +2,7 @@ export class user{
     
         UserName:string;
         phone:string;
-        firstLogin: boolean = false;
+        //firstLogin: boolean = false;
         contactId:any[];
 
         constructor(user) {

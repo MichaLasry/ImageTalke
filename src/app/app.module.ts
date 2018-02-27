@@ -5,8 +5,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
-import { ContactsComponent } from './contacts/contacts.component';
-import { AnimalsComponent } from './animals/animals.component';
+import { CategoriesComponent } from './categories/categories.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule, MatButtonModule, MatIconModule } from "@angular/material";
 import { AddContactDialog } from "./dialog/add-contact-dialog/add-contact-dialog.componet";
@@ -43,8 +42,7 @@ export const environment = {
     AppComponent,
     LoginComponent,
     HomeComponent,
-    ContactsComponent,
-    AnimalsComponent,
+    CategoriesComponent,
     AddContactDialog,
     
     
