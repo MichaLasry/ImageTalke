@@ -10,7 +10,7 @@ Our application is designed for children with social disabilities - defined as a
 The app can help these children learn and communicate with those around them. By associating sentences by assembling images into a sentence.
 
 
-![project logo (this one for is taken from basecamp - a project management service)](https://github.com/MichaLasry/ImageTalke/blob/master/images/logo.JPG)
+![project logo (this one for is taken from basecamp - a project management service)](https://github.com/MichaLasry/ImageTalke/blob/master/logoFi.png)
 
 
 ## Please visit our [live application](https://imagetalk-76424.firebaseapp.com)
