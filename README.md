@@ -13,7 +13,7 @@ The app can help these children learn and communicate with those around them. By
 ![project logo (this one for is taken from basecamp - a project management service)](https://github.com/MichaLasry/ImageTalke/blob/master/images/logo.JPG)
 
 
-## Please visit our [live application](https://github.com/MichaLasry/ImageTalke/blob/master/src/app/home/home.component.html)
+## Please visit our [live application](https://imagetalk-76424.firebaseapp.com)
 
 ## Disclaimer
 This project is developed as part of the requirements for a [software engineering course](https://github.com/jce-il/se-class/wiki) at the software engineering department - [Azrieli College of Engineering](http://www.jce.ac.il/), Jerusalem, Israel.
