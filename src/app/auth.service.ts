@@ -36,26 +36,21 @@ export class AuthService {
   public keepUser(user)//מעדכנת את הנתונים בשרת
   {
     let temp =JSON.parse(JSON.stringify(user));
-    console.log(temp);
     this.Uname=temp.username;
-    this.Uphone=temp.phone;
-    console.log(this.Uname);
     return new Promise((res, rej) => {
       this.afAuth.auth.signInWithPopup(
         new firebase.auth.GoogleAuthProvider()).then(user => { 
           this.afs.doc("users/" + this.Uname).valueChanges().subscribe(u => {
             this._user = u;
-            console.log (this._user);
           });
           this._user.UserName=this.Uname;
           this._user.phone=this.Uphone;
         
           res(this._user);
-          console.log(res);
         });
     });
     
-   //return temp.UserName;
+
   }
   
   loginWithGoogle() {
@@ -72,16 +67,6 @@ export class AuthService {
     })
 */
   }
- /* gtttt()
-  {
-    this.userdoc=this.afs.doc("users/"+ ){
-      this.userdoc.valueChanges().subscribe(res=>{
-  let u=res.UserName;
-  this.authService.getu(u);
-      });
-    }
-  }
-*/
   public setu(u){
     return u;
   }
