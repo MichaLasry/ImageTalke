@@ -19,7 +19,6 @@ This project is developed as part of the requirements for a [software engineerin
 Please visit our wiki for furthur project info: 
 
 ### [User Manual](../../wiki/user-manual) 
-
 ### [Team Page](https://github.com/MichaLasry/ImageTalke/wiki/Team-Page)
 ### [Task Management System](https://github.com/MichaLasry/ImageTalke/issues)
 ### [Project Board link](https://github.com/MichaLasry/ImageTalke/projects/1)
