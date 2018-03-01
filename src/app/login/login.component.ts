@@ -17,8 +17,7 @@ export class LoginComponent implements OnInit {
   public phone: string;
   public contactId:any[];
   private userdoc: AngularFirestoreDocument<any>;
-
-  //phoneRecaptchaVerifier: firebase.auth.RecaptchaVerifier
+  
   constructor(public router: Router, private firebaseService: Firebase,  private afs: AngularFirestore, public authService: AuthService) {
     this.UserName="";
     this.phone=null;

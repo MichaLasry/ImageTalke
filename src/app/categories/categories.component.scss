@@ -11,10 +11,7 @@
 	
     top:52.3%;
     left: 26.5%;
-	overflow: scroll;
-    //-webkit-box-orient: vertical;
-    //-webkit-box-direction: normal;
-	//overflow-x: scroll;	
+	overflow: scroll;	
 }
 
 .footer::-webkit-scrollbar
@@ -30,8 +27,6 @@
 }
 hr{
 	margin: 30px 20px;
-	//border-top:1px solid #1C1E26 ;
-	//border-bottom:1px solid #38404D;
 }
 .list-unstyled {
 	padding-left: 0;
