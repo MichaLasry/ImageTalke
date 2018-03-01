@@ -25,7 +25,6 @@ Please visit our wiki for furthur project info:
 ### [Project Board link](https://github.com/MichaLasry/ImageTalke/projects/1)
 
 
-
 ### Project Documents
 - [Project Idea](https://github.com/MichaLasry/ImageTalke/blob/master/Image%20talk.docx) ([Presentation](https://github.com/MichaLasry/ImageTalke/blob/master/Image%20talk%20(1).pdf))
 - [Project Inception](../../wiki/inception)
