@@ -39,4 +39,3 @@ Please visit our wiki for furthur project info:
 - [Iteration 4 - firebase & customer & tests](https://github.com/MichaLasry/ImageTalke/wiki/iteration-4---firebase-&-customer-&-tests)
 
 
-
